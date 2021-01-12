@@ -115,12 +115,14 @@ namespace The2000s
             this.listProduct.Name = "listProduct";
             this.listProduct.Size = new System.Drawing.Size(184, 22);
             this.listProduct.Text = "Danh sách sản phẩm";
+            this.listProduct.Click += new System.EventHandler(this.listProduct_Click);
             // 
             // productCategory
             // 
             this.productCategory.Name = "productCategory";
             this.productCategory.Size = new System.Drawing.Size(184, 22);
             this.productCategory.Text = "Danh mục sản phẩm";
+            this.productCategory.Click += new System.EventHandler(this.productCategory_Click);
             // 
             // bánHàngToolStripMenuItem
             // 
@@ -136,12 +138,14 @@ namespace The2000s
             this.orderList.Name = "orderList";
             this.orderList.Size = new System.Drawing.Size(183, 22);
             this.orderList.Text = "Danh sách đơn hàng";
+            this.orderList.Click += new System.EventHandler(this.orderList_Click);
             // 
             // addOrder
             // 
             this.addOrder.Name = "addOrder";
             this.addOrder.Size = new System.Drawing.Size(183, 22);
             this.addOrder.Text = "Thêm đơn hàng mới";
+            this.addOrder.Click += new System.EventHandler(this.addOrder_Click);
             // 
             // usersToolStripMenuItem
             // 

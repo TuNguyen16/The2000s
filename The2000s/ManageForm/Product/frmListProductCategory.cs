@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace The2000s.ManageForm
+namespace The2000s.ManageForm.Product
 {
-    public partial class frmAddProduct : Form
+    public partial class frmListProductCategory : Form
     {
-        public frmAddProduct()
+        public frmListProductCategory()
         {
             InitializeComponent();
         }

@@ -58,11 +58,35 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageForm\Product\AddProduct.cs">
+    <Compile Include="ManageForm\Order\frmAddOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageForm\Product\AddProduct.Designer.cs">
-      <DependentUpon>AddProduct.cs</DependentUpon>
+    <Compile Include="ManageForm\Order\frmAddOrder.Designer.cs">
+      <DependentUpon>frmAddOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageForm\Order\frmListOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageForm\Order\frmListOrder.Designer.cs">
+      <DependentUpon>frmListOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageForm\Product\frmAddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageForm\Product\frmAddProduct.Designer.cs">
+      <DependentUpon>frmAddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageForm\Product\frmListProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageForm\Product\frmListProduct.Designer.cs">
+      <DependentUpon>frmListProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageForm\Product\frmListProductCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageForm\Product\frmListProductCategory.Designer.cs">
+      <DependentUpon>frmListProductCategory.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -72,8 +96,20 @@
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageForm\Product\AddProduct.resx">
-      <DependentUpon>AddProduct.cs</DependentUpon>
+    <EmbeddedResource Include="ManageForm\Order\frmAddOrder.resx">
+      <DependentUpon>frmAddOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageForm\Order\frmListOrder.resx">
+      <DependentUpon>frmListOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageForm\Product\frmAddProduct.resx">
+      <DependentUpon>frmAddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageForm\Product\frmListProduct.resx">
+      <DependentUpon>frmListProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageForm\Product\frmListProductCategory.resx">
+      <DependentUpon>frmListProductCategory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

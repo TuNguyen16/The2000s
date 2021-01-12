@@ -1,5 +1,5 @@
 ﻿
-namespace The2000s.ManageForm
+namespace The2000s.ManageForm.Product
 {
     partial class frmAddProduct
     {
