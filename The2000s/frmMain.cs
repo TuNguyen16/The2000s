@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using The2000s.ManageForm.Product;
 using The2000s.ManageForm.Order;
+using The2000s.ManageForm.User;
 
 namespace The2000s
 {
@@ -63,6 +64,18 @@ namespace The2000s
         {
             frmAddOrder addOrder = new frmAddOrder();
             addOrder.Show();
+        }
+
+        private void listUser_Click(object sender, EventArgs e)
+        {
+            frmListUser luser = new frmListUser();
+            luser.Show();
+        }
+
+        private void addUser_Click(object sender, EventArgs e)
+        {
+            frmAddUser auser = new frmAddUser();
+            auser.Show();
         }
     }
 }

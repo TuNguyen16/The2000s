@@ -55,8 +55,6 @@ namespace The2000s
             this.label4 = new System.Windows.Forms.Label();
             this.lbCancel = new System.Windows.Forms.Label();
             this.dgvOrderList = new System.Windows.Forms.DataGridView();
-            this.lbWelcome = new System.Windows.Forms.Label();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.No = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,6 +63,8 @@ namespace The2000s
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DateCreate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lbWelcome = new System.Windows.Forms.Label();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -161,12 +161,14 @@ namespace The2000s
             this.listUser.Name = "listUser";
             this.listUser.Size = new System.Drawing.Size(194, 22);
             this.listUser.Text = "Danh sách người dùng";
+            this.listUser.Click += new System.EventHandler(this.listUser_Click);
             // 
             // addUser
             // 
             this.addUser.Name = "addUser";
             this.addUser.Size = new System.Drawing.Size(194, 22);
             this.addUser.Text = "Thêm người dùng mới";
+            this.addUser.Click += new System.EventHandler(this.addUser_Click);
             // 
             // groupBox1
             // 
@@ -325,26 +327,6 @@ namespace The2000s
             this.dgvOrderList.Size = new System.Drawing.Size(888, 279);
             this.dgvOrderList.TabIndex = 4;
             // 
-            // lbWelcome
-            // 
-            this.lbWelcome.AutoSize = true;
-            this.lbWelcome.Font = new System.Drawing.Font("Arial", 16F);
-            this.lbWelcome.Location = new System.Drawing.Point(344, 24);
-            this.lbWelcome.Name = "lbWelcome";
-            this.lbWelcome.Size = new System.Drawing.Size(237, 25);
-            this.lbWelcome.TabIndex = 5;
-            this.lbWelcome.Text = "Chào mừng, Username";
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.dgvOrderList);
-            this.groupBox5.Location = new System.Drawing.Point(13, 155);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(905, 304);
-            this.groupBox5.TabIndex = 6;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Đơn hàng mới";
-            // 
             // No
             // 
             this.No.HeaderText = "#";
@@ -398,6 +380,26 @@ namespace The2000s
             this.DateCreate.Name = "DateCreate";
             this.DateCreate.ReadOnly = true;
             this.DateCreate.Width = 145;
+            // 
+            // lbWelcome
+            // 
+            this.lbWelcome.AutoSize = true;
+            this.lbWelcome.Font = new System.Drawing.Font("Arial", 16F);
+            this.lbWelcome.Location = new System.Drawing.Point(344, 24);
+            this.lbWelcome.Name = "lbWelcome";
+            this.lbWelcome.Size = new System.Drawing.Size(237, 25);
+            this.lbWelcome.TabIndex = 5;
+            this.lbWelcome.Text = "Chào mừng, Username";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.dgvOrderList);
+            this.groupBox5.Location = new System.Drawing.Point(13, 155);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(905, 304);
+            this.groupBox5.TabIndex = 6;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Đơn hàng mới";
             // 
             // frmMain
             // 

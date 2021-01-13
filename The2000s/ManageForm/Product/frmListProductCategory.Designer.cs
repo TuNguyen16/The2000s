@@ -39,14 +39,14 @@ namespace The2000s.ManageForm.Product
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvCategoryList = new System.Windows.Forms.DataGridView();
             this.No = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CatName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ParentCatName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCategoryList)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -141,7 +141,7 @@ namespace The2000s.ManageForm.Product
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.dataGridView1);
+            this.groupBox2.Controls.Add(this.dgvCategoryList);
             this.groupBox2.Location = new System.Drawing.Point(292, 36);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(361, 475);
@@ -149,20 +149,20 @@ namespace The2000s.ManageForm.Product
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách";
             // 
-            // dataGridView1
+            // dgvCategoryList
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvCategoryList.AllowUserToAddRows = false;
+            this.dgvCategoryList.AllowUserToDeleteRows = false;
+            this.dgvCategoryList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCategoryList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.No,
             this.CatName,
             this.ParentCatName});
-            this.dataGridView1.Location = new System.Drawing.Point(6, 19);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(345, 450);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvCategoryList.Location = new System.Drawing.Point(6, 19);
+            this.dgvCategoryList.Name = "dgvCategoryList";
+            this.dgvCategoryList.ReadOnly = true;
+            this.dgvCategoryList.Size = new System.Drawing.Size(345, 450);
+            this.dgvCategoryList.TabIndex = 0;
             // 
             // No
             // 
@@ -208,7 +208,7 @@ namespace The2000s.ManageForm.Product
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCategoryList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -226,7 +226,7 @@ namespace The2000s.ManageForm.Product
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvCategoryList;
         private System.Windows.Forms.DataGridViewTextBoxColumn No;
         private System.Windows.Forms.DataGridViewTextBoxColumn CatName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ParentCatName;

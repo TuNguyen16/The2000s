@@ -15,6 +15,14 @@ namespace The2000s.ManageForm.Product
         public frmListProductCategory()
         {
             InitializeComponent();
+
+            for (int i = 0; i < 3; i++)
+            {
+                int index = dgvCategoryList.Rows.Add();
+
+                dgvCategoryList.Rows[index].Cells[0].Value = index + 1;
+                dgvCategoryList.Rows[index].Cells[1].Value = "Danh mục " + (i + 1);
+                dgvCategoryList.Rows[index].Cells[2].Value = "Danh mục 0";            }
         }
     }
 }
