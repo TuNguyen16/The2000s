@@ -10,32 +10,53 @@ using System.Windows.Forms;
 using The2000s.ManageForm.Product;
 using The2000s.ManageForm.Order;
 using The2000s.ManageForm.User;
+using The2000s.Models;
 
 namespace The2000s
 {
     public partial class frmMain : Form
     {
+        DB_Context context = new DB_Context();
+        User loginUser;
         public frmMain()
         {
             InitializeComponent();
 
-            //lbWelcome.Text = "Chào mừng, " + username;
+            
+        }
 
-            for (int i = 0; i < 5; i++)
+        private void SetPermission()
+        {
+            frmLogin login = new frmLogin();
+            DialogResult result = login.ShowDialog();
+            if (result == DialogResult.OK)
             {
-                int index = dgvOrderList.Rows.Add();
-
-                dgvOrderList.Rows[index].Cells[0].Value = index + 1;
-                dgvOrderList.Rows[index].Cells[1].Value = "006" + i;
-                dgvOrderList.Rows[index].Cells[2].Value = "Nguyễn Văn " + i;
-                dgvOrderList.Rows[index].Cells[3].Value = "Sản phẩm " + i;
-                dgvOrderList.Rows[index].Cells[4].Value = i + 1;
-                dgvOrderList.Rows[index].Cells[5].Value = (i + 1) * 250000;
-                dgvOrderList.Rows[index].Cells[6].Value = "Đang xử lý";
-                dgvOrderList.Rows[index].Cells[7].Value = DateTime.Now;
+                menuFeature.Enabled = true;
+                loginUser = context.Users.FirstOrDefault(p => p.UserID == login.userid);
+                int userRole = (int)loginUser.RoleID;
+                switch (userRole)
+                {
+                    case 2:
+                        menuStorage.Enabled = false;
+                        menuUser.Enabled = false;
+                        break;
+                    case 3:
+                        menuProduct.Enabled = false;
+                        menuOrder.Enabled = false;
+                        break;
+                }
+            }
+            else
+            {
+                this.Close();
             }
         }
 
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            SetPermission();
+            lbWelcome.Text = "Chào mừng, " + loginUser.FullName + " (" +loginUser.Role.RoleName +")";
+        }
         private void addProduct_Click(object sender, EventArgs e)
         {
             frmAddProduct add = new frmAddProduct();
@@ -77,5 +98,6 @@ namespace The2000s
             frmAddUser auser = new frmAddUser();
             auser.Show();
         }
+        
     }
 }

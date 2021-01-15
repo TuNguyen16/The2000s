@@ -30,18 +30,14 @@ namespace The2000s
         private void InitializeComponent()
         {
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.dashbroadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sảnPhẩmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addProduct = new System.Windows.Forms.ToolStripMenuItem();
-            this.listProduct = new System.Windows.Forms.ToolStripMenuItem();
-            this.productCategory = new System.Windows.Forms.ToolStripMenuItem();
-            this.bánHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.orderList = new System.Windows.Forms.ToolStripMenuItem();
-            this.addOrder = new System.Windows.Forms.ToolStripMenuItem();
-            this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuFeature = new System.Windows.Forms.MenuStrip();
+            this.menuProduct = new System.Windows.Forms.ToolStripMenuItem();
+            this.QL_Product = new System.Windows.Forms.ToolStripMenuItem();
+            this.QL_ProductCategory = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuOrder = new System.Windows.Forms.ToolStripMenuItem();
+            this.QL_Order = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuUser = new System.Windows.Forms.ToolStripMenuItem();
             this.listUser = new System.Windows.Forms.ToolStripMenuItem();
-            this.addUser = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lbSuccess = new System.Windows.Forms.Label();
@@ -65,7 +61,13 @@ namespace The2000s
             this.DateCreate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbWelcome = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.menuStrip1.SuspendLayout();
+            this.menuStorage = new System.Windows.Forms.ToolStripMenuItem();
+            this.QL_Storage = new System.Windows.Forms.ToolStripMenuItem();
+            this.QL_Supplier = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStat = new System.Windows.Forms.ToolStripMenuItem();
+            this.tìmKiếmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuFeature.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -74,101 +76,73 @@ namespace The2000s
             this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // menuFeature
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dashbroadToolStripMenuItem,
-            this.sảnPhẩmToolStripMenuItem,
-            this.bánHàngToolStripMenuItem,
-            this.usersToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(923, 24);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
+            this.menuFeature.Enabled = false;
+            this.menuFeature.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuProduct,
+            this.menuOrder,
+            this.menuStorage,
+            this.menuUser,
+            this.menuStat});
+            this.menuFeature.Location = new System.Drawing.Point(0, 0);
+            this.menuFeature.Name = "menuFeature";
+            this.menuFeature.Size = new System.Drawing.Size(923, 24);
+            this.menuFeature.TabIndex = 1;
+            this.menuFeature.Text = "menuStrip1";
             // 
-            // dashbroadToolStripMenuItem
+            // menuProduct
             // 
-            this.dashbroadToolStripMenuItem.Name = "dashbroadToolStripMenuItem";
-            this.dashbroadToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
-            this.dashbroadToolStripMenuItem.Text = "Trang Chủ";
+            this.menuProduct.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.QL_Product,
+            this.QL_ProductCategory});
+            this.menuProduct.Name = "menuProduct";
+            this.menuProduct.Size = new System.Drawing.Size(72, 20);
+            this.menuProduct.Text = "Sản phẩm";
             // 
-            // sảnPhẩmToolStripMenuItem
+            // QL_Product
             // 
-            this.sảnPhẩmToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addProduct,
-            this.listProduct,
-            this.productCategory});
-            this.sảnPhẩmToolStripMenuItem.Name = "sảnPhẩmToolStripMenuItem";
-            this.sảnPhẩmToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
-            this.sảnPhẩmToolStripMenuItem.Text = "Sản phẩm";
+            this.QL_Product.Name = "QL_Product";
+            this.QL_Product.Size = new System.Drawing.Size(180, 22);
+            this.QL_Product.Text = "Quản lý sản phẩm";
+            this.QL_Product.Click += new System.EventHandler(this.listProduct_Click);
             // 
-            // addProduct
+            // QL_ProductCategory
             // 
-            this.addProduct.Name = "addProduct";
-            this.addProduct.Size = new System.Drawing.Size(184, 22);
-            this.addProduct.Text = "Thêm sản phẩm";
-            this.addProduct.Click += new System.EventHandler(this.addProduct_Click);
+            this.QL_ProductCategory.Name = "QL_ProductCategory";
+            this.QL_ProductCategory.Size = new System.Drawing.Size(180, 22);
+            this.QL_ProductCategory.Text = "QL loại sản phẩm";
+            this.QL_ProductCategory.Click += new System.EventHandler(this.productCategory_Click);
             // 
-            // listProduct
+            // menuOrder
             // 
-            this.listProduct.Name = "listProduct";
-            this.listProduct.Size = new System.Drawing.Size(184, 22);
-            this.listProduct.Text = "Danh sách sản phẩm";
-            this.listProduct.Click += new System.EventHandler(this.listProduct_Click);
+            this.menuOrder.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.QL_Order});
+            this.menuOrder.Name = "menuOrder";
+            this.menuOrder.Size = new System.Drawing.Size(69, 20);
+            this.menuOrder.Text = "Bán hàng";
             // 
-            // productCategory
+            // QL_Order
             // 
-            this.productCategory.Name = "productCategory";
-            this.productCategory.Size = new System.Drawing.Size(184, 22);
-            this.productCategory.Text = "Danh mục sản phẩm";
-            this.productCategory.Click += new System.EventHandler(this.productCategory_Click);
+            this.QL_Order.Name = "QL_Order";
+            this.QL_Order.Size = new System.Drawing.Size(180, 22);
+            this.QL_Order.Text = "Quản lý đơn hàng";
+            this.QL_Order.Click += new System.EventHandler(this.orderList_Click);
             // 
-            // bánHàngToolStripMenuItem
+            // menuUser
             // 
-            this.bánHàngToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.orderList,
-            this.addOrder});
-            this.bánHàngToolStripMenuItem.Name = "bánHàngToolStripMenuItem";
-            this.bánHàngToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
-            this.bánHàngToolStripMenuItem.Text = "Bán hàng";
-            // 
-            // orderList
-            // 
-            this.orderList.Name = "orderList";
-            this.orderList.Size = new System.Drawing.Size(183, 22);
-            this.orderList.Text = "Danh sách đơn hàng";
-            this.orderList.Click += new System.EventHandler(this.orderList_Click);
-            // 
-            // addOrder
-            // 
-            this.addOrder.Name = "addOrder";
-            this.addOrder.Size = new System.Drawing.Size(183, 22);
-            this.addOrder.Text = "Thêm đơn hàng mới";
-            this.addOrder.Click += new System.EventHandler(this.addOrder_Click);
-            // 
-            // usersToolStripMenuItem
-            // 
-            this.usersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.listUser,
-            this.addUser});
-            this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
-            this.usersToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
-            this.usersToolStripMenuItem.Text = "Người Dùng";
+            this.menuUser.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.listUser});
+            this.menuUser.Name = "menuUser";
+            this.menuUser.Size = new System.Drawing.Size(84, 20);
+            this.menuUser.Text = "Người Dùng";
             // 
             // listUser
             // 
             this.listUser.Name = "listUser";
-            this.listUser.Size = new System.Drawing.Size(194, 22);
-            this.listUser.Text = "Danh sách người dùng";
+            this.listUser.Size = new System.Drawing.Size(180, 22);
+            this.listUser.Text = "Quản lý người dùng";
             this.listUser.Click += new System.EventHandler(this.listUser_Click);
-            // 
-            // addUser
-            // 
-            this.addUser.Name = "addUser";
-            this.addUser.Size = new System.Drawing.Size(194, 22);
-            this.addUser.Text = "Thêm người dùng mới";
-            this.addUser.Click += new System.EventHandler(this.addUser_Click);
             // 
             // groupBox1
             // 
@@ -385,7 +359,7 @@ namespace The2000s
             // 
             this.lbWelcome.AutoSize = true;
             this.lbWelcome.Font = new System.Drawing.Font("Arial", 16F);
-            this.lbWelcome.Location = new System.Drawing.Point(344, 24);
+            this.lbWelcome.Location = new System.Drawing.Point(12, 24);
             this.lbWelcome.Name = "lbWelcome";
             this.lbWelcome.Size = new System.Drawing.Size(237, 25);
             this.lbWelcome.TabIndex = 5;
@@ -401,6 +375,48 @@ namespace The2000s
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Đơn hàng mới";
             // 
+            // menuStorage
+            // 
+            this.menuStorage.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.QL_Storage,
+            this.QL_Supplier});
+            this.menuStorage.Name = "menuStorage";
+            this.menuStorage.Size = new System.Drawing.Size(70, 20);
+            this.menuStorage.Text = "Kho hàng";
+            // 
+            // QL_Storage
+            // 
+            this.QL_Storage.Name = "QL_Storage";
+            this.QL_Storage.Size = new System.Drawing.Size(190, 22);
+            this.QL_Storage.Text = "Quản lý kho hàng";
+            // 
+            // QL_Supplier
+            // 
+            this.QL_Supplier.Name = "QL_Supplier";
+            this.QL_Supplier.Size = new System.Drawing.Size(190, 22);
+            this.QL_Supplier.Text = "Quản lý nhà cung cấp";
+            // 
+            // menuStat
+            // 
+            this.menuStat.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tìmKiếmToolStripMenuItem,
+            this.thốngKêToolStripMenuItem});
+            this.menuStat.Name = "menuStat";
+            this.menuStat.Size = new System.Drawing.Size(122, 20);
+            this.menuStat.Text = "Tra cứu và thống kê";
+            // 
+            // tìmKiếmToolStripMenuItem
+            // 
+            this.tìmKiếmToolStripMenuItem.Name = "tìmKiếmToolStripMenuItem";
+            this.tìmKiếmToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tìmKiếmToolStripMenuItem.Text = "Tìm kiếm";
+            // 
+            // thốngKêToolStripMenuItem
+            // 
+            this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
+            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.thốngKêToolStripMenuItem.Text = "Thống kê";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -412,13 +428,15 @@ namespace The2000s
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.menuFeature);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trang chủ";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.Load += new System.EventHandler(this.frmMain_Load);
+            this.menuFeature.ResumeLayout(false);
+            this.menuFeature.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -436,18 +454,14 @@ namespace The2000s
 
         #endregion
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem dashbroadToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sảnPhẩmToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addProduct;
-        private System.Windows.Forms.ToolStripMenuItem listProduct;
-        private System.Windows.Forms.ToolStripMenuItem productCategory;
-        private System.Windows.Forms.ToolStripMenuItem bánHàngToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem orderList;
-        private System.Windows.Forms.ToolStripMenuItem addOrder;
-        private System.Windows.Forms.ToolStripMenuItem usersToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip menuFeature;
+        private System.Windows.Forms.ToolStripMenuItem menuProduct;
+        private System.Windows.Forms.ToolStripMenuItem QL_Product;
+        private System.Windows.Forms.ToolStripMenuItem QL_ProductCategory;
+        private System.Windows.Forms.ToolStripMenuItem menuOrder;
+        private System.Windows.Forms.ToolStripMenuItem QL_Order;
+        private System.Windows.Forms.ToolStripMenuItem menuUser;
         private System.Windows.Forms.ToolStripMenuItem listUser;
-        private System.Windows.Forms.ToolStripMenuItem addUser;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lbSuccess;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -471,5 +485,12 @@ namespace The2000s
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
         private System.Windows.Forms.DataGridViewTextBoxColumn DateCreate;
+        private System.Windows.Forms.ToolStripMenuItem menuStorage;
+        private System.Windows.Forms.ToolStripMenuItem QL_Storage;
+        private System.Windows.Forms.ToolStripMenuItem QL_Supplier;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem menuStat;
+        private System.Windows.Forms.ToolStripMenuItem tìmKiếmToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem thốngKêToolStripMenuItem;
     }
 }

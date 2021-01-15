@@ -16,6 +16,7 @@ namespace The2000s
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
             Application.Run(new frmMain());
         }
     }
