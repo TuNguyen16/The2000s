@@ -17,7 +17,24 @@ namespace The2000s
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new frmMain());
+            frmLogin login = new frmLogin();
+            DialogResult result = login.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                switch (login.roleid)
+                {
+                    case 1:
+                        Application.Run(new frmAdmin(login.userid));
+                        break;
+                    case 2:
+                        Application.Run(new frmNVBH());
+                        break;
+                    case 3:
+                        Application.Run(new frmNVKho());
+                        break;
+                }
+                
+            }
         }
     }
 }

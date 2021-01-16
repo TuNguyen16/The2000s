@@ -1,7 +1,7 @@
 ﻿
 namespace The2000s
 {
-    partial class frmMain
+    partial class frmAdmin
     {
         /// <summary>
         /// Required designer variable.
@@ -36,8 +36,14 @@ namespace The2000s
             this.QL_ProductCategory = new System.Windows.Forms.ToolStripMenuItem();
             this.menuOrder = new System.Windows.Forms.ToolStripMenuItem();
             this.QL_Order = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStorage = new System.Windows.Forms.ToolStripMenuItem();
+            this.QL_Storage = new System.Windows.Forms.ToolStripMenuItem();
+            this.QL_Supplier = new System.Windows.Forms.ToolStripMenuItem();
             this.menuUser = new System.Windows.Forms.ToolStripMenuItem();
             this.listUser = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStat = new System.Windows.Forms.ToolStripMenuItem();
+            this.tìmKiếmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lbSuccess = new System.Windows.Forms.Label();
@@ -46,7 +52,7 @@ namespace The2000s
             this.lbProcessing = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.lbReport = new System.Windows.Forms.Label();
+            this.lbEarned = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.lbCancel = new System.Windows.Forms.Label();
@@ -61,12 +67,7 @@ namespace The2000s
             this.DateCreate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbWelcome = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.menuStorage = new System.Windows.Forms.ToolStripMenuItem();
-            this.QL_Storage = new System.Windows.Forms.ToolStripMenuItem();
-            this.QL_Supplier = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStat = new System.Windows.Forms.ToolStripMenuItem();
-            this.tìmKiếmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lbRole = new System.Windows.Forms.Label();
             this.menuFeature.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -103,14 +104,14 @@ namespace The2000s
             // QL_Product
             // 
             this.QL_Product.Name = "QL_Product";
-            this.QL_Product.Size = new System.Drawing.Size(180, 22);
+            this.QL_Product.Size = new System.Drawing.Size(170, 22);
             this.QL_Product.Text = "Quản lý sản phẩm";
             this.QL_Product.Click += new System.EventHandler(this.listProduct_Click);
             // 
             // QL_ProductCategory
             // 
             this.QL_ProductCategory.Name = "QL_ProductCategory";
-            this.QL_ProductCategory.Size = new System.Drawing.Size(180, 22);
+            this.QL_ProductCategory.Size = new System.Drawing.Size(170, 22);
             this.QL_ProductCategory.Text = "QL loại sản phẩm";
             this.QL_ProductCategory.Click += new System.EventHandler(this.productCategory_Click);
             // 
@@ -125,9 +126,30 @@ namespace The2000s
             // QL_Order
             // 
             this.QL_Order.Name = "QL_Order";
-            this.QL_Order.Size = new System.Drawing.Size(180, 22);
+            this.QL_Order.Size = new System.Drawing.Size(169, 22);
             this.QL_Order.Text = "Quản lý đơn hàng";
             this.QL_Order.Click += new System.EventHandler(this.orderList_Click);
+            // 
+            // menuStorage
+            // 
+            this.menuStorage.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.QL_Storage,
+            this.QL_Supplier});
+            this.menuStorage.Name = "menuStorage";
+            this.menuStorage.Size = new System.Drawing.Size(70, 20);
+            this.menuStorage.Text = "Kho hàng";
+            // 
+            // QL_Storage
+            // 
+            this.QL_Storage.Name = "QL_Storage";
+            this.QL_Storage.Size = new System.Drawing.Size(190, 22);
+            this.QL_Storage.Text = "Quản lý kho hàng";
+            // 
+            // QL_Supplier
+            // 
+            this.QL_Supplier.Name = "QL_Supplier";
+            this.QL_Supplier.Size = new System.Drawing.Size(190, 22);
+            this.QL_Supplier.Text = "Quản lý nhà cung cấp";
             // 
             // menuUser
             // 
@@ -143,6 +165,27 @@ namespace The2000s
             this.listUser.Size = new System.Drawing.Size(180, 22);
             this.listUser.Text = "Quản lý người dùng";
             this.listUser.Click += new System.EventHandler(this.listUser_Click);
+            // 
+            // menuStat
+            // 
+            this.menuStat.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tìmKiếmToolStripMenuItem,
+            this.thốngKêToolStripMenuItem});
+            this.menuStat.Name = "menuStat";
+            this.menuStat.Size = new System.Drawing.Size(122, 20);
+            this.menuStat.Text = "Tra cứu và thống kê";
+            // 
+            // tìmKiếmToolStripMenuItem
+            // 
+            this.tìmKiếmToolStripMenuItem.Name = "tìmKiếmToolStripMenuItem";
+            this.tìmKiếmToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.tìmKiếmToolStripMenuItem.Text = "Tìm kiếm";
+            // 
+            // thốngKêToolStripMenuItem
+            // 
+            this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
+            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.thốngKêToolStripMenuItem.Text = "Thống kê";
             // 
             // groupBox1
             // 
@@ -216,7 +259,7 @@ namespace The2000s
             // 
             this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
             this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Controls.Add(this.lbReport);
+            this.groupBox3.Controls.Add(this.lbEarned);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.groupBox3.ForeColor = System.Drawing.Color.White;
             this.groupBox3.Location = new System.Drawing.Point(467, 52);
@@ -236,15 +279,15 @@ namespace The2000s
             this.label2.TabIndex = 4;
             this.label2.Text = "Doanh số hệ thống";
             // 
-            // lbReport
+            // lbEarned
             // 
-            this.lbReport.AutoSize = true;
-            this.lbReport.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbReport.Location = new System.Drawing.Point(6, 26);
-            this.lbReport.Name = "lbReport";
-            this.lbReport.Size = new System.Drawing.Size(59, 22);
-            this.lbReport.TabIndex = 2;
-            this.lbReport.Text = "2.5 tỷ";
+            this.lbEarned.AutoSize = true;
+            this.lbEarned.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEarned.Location = new System.Drawing.Point(6, 26);
+            this.lbEarned.Name = "lbEarned";
+            this.lbEarned.Size = new System.Drawing.Size(59, 22);
+            this.lbEarned.TabIndex = 2;
+            this.lbEarned.Text = "2.5 tỷ";
             // 
             // groupBox4
             // 
@@ -375,53 +418,22 @@ namespace The2000s
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Đơn hàng mới";
             // 
-            // menuStorage
+            // lbRole
             // 
-            this.menuStorage.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.QL_Storage,
-            this.QL_Supplier});
-            this.menuStorage.Name = "menuStorage";
-            this.menuStorage.Size = new System.Drawing.Size(70, 20);
-            this.menuStorage.Text = "Kho hàng";
+            this.lbRole.AutoSize = true;
+            this.lbRole.Font = new System.Drawing.Font("Arial", 16F);
+            this.lbRole.Location = new System.Drawing.Point(783, 24);
+            this.lbRole.Name = "lbRole";
+            this.lbRole.Size = new System.Drawing.Size(132, 25);
+            this.lbRole.TabIndex = 7;
+            this.lbRole.Text = "Quản trị viên";
             // 
-            // QL_Storage
-            // 
-            this.QL_Storage.Name = "QL_Storage";
-            this.QL_Storage.Size = new System.Drawing.Size(190, 22);
-            this.QL_Storage.Text = "Quản lý kho hàng";
-            // 
-            // QL_Supplier
-            // 
-            this.QL_Supplier.Name = "QL_Supplier";
-            this.QL_Supplier.Size = new System.Drawing.Size(190, 22);
-            this.QL_Supplier.Text = "Quản lý nhà cung cấp";
-            // 
-            // menuStat
-            // 
-            this.menuStat.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tìmKiếmToolStripMenuItem,
-            this.thốngKêToolStripMenuItem});
-            this.menuStat.Name = "menuStat";
-            this.menuStat.Size = new System.Drawing.Size(122, 20);
-            this.menuStat.Text = "Tra cứu và thống kê";
-            // 
-            // tìmKiếmToolStripMenuItem
-            // 
-            this.tìmKiếmToolStripMenuItem.Name = "tìmKiếmToolStripMenuItem";
-            this.tìmKiếmToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.tìmKiếmToolStripMenuItem.Text = "Tìm kiếm";
-            // 
-            // thốngKêToolStripMenuItem
-            // 
-            this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
-            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.thốngKêToolStripMenuItem.Text = "Thống kê";
-            // 
-            // frmMain
+            // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(923, 470);
+            this.Controls.Add(this.lbRole);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.lbWelcome);
             this.Controls.Add(this.groupBox4);
@@ -431,7 +443,7 @@ namespace The2000s
             this.Controls.Add(this.menuFeature);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.Name = "frmMain";
+            this.Name = "frmAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trang chủ";
             this.Load += new System.EventHandler(this.frmMain_Load);
@@ -468,7 +480,7 @@ namespace The2000s
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbProcessing;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label lbReport;
+        private System.Windows.Forms.Label lbEarned;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label lbCancel;
         private System.Windows.Forms.Label label3;
@@ -492,5 +504,6 @@ namespace The2000s
         private System.Windows.Forms.ToolStripMenuItem menuStat;
         private System.Windows.Forms.ToolStripMenuItem tìmKiếmToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thốngKêToolStripMenuItem;
+        private System.Windows.Forms.Label lbRole;
     }
 }
