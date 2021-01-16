@@ -45,7 +45,6 @@ namespace The2000s
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

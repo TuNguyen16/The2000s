@@ -124,7 +124,7 @@ namespace The2000s
 
         private void listUser_Click(object sender, EventArgs e)
         {
-            frmListUser luser = new frmListUser();
+            frmListUser luser = new frmListUser(loginUser.UserID);
             luser.Show();
         }
 

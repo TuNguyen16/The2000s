@@ -31,7 +31,7 @@ namespace The2000s.Models
 
         public DateTime? CreatedAt { get; set; }
 
-        public DateTime? CreatedBy { get; set; }
+        public int? CreatedBy { get; set; }
 
         public int? Status { get; set; }
 
