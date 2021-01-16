@@ -1,5 +1,5 @@
 ﻿
-namespace The2000s.ManageForm.Order
+namespace The2000s.ManageForm.FormOrder
 {
     partial class frmAddOrder
     {

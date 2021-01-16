@@ -79,7 +79,6 @@ namespace The2000s
             // 
             // menuFeature
             // 
-            this.menuFeature.Enabled = false;
             this.menuFeature.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuProduct,
             this.menuOrder,

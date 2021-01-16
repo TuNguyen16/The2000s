@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace The2000s.ManageForm.Order
+namespace The2000s.ManageForm.FormUser
 {
-    public partial class frmAddOrder : Form
+    public partial class frmAddUser : Form
     {
-        public frmAddOrder()
+        public frmAddUser()
         {
             InitializeComponent();
         }

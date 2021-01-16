@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace The2000s.ManageForm.Product
+namespace The2000s.ManageForm.FormProduct
 {
     public partial class frmListProductCategory : Form
     {

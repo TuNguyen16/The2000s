@@ -1,5 +1,5 @@
 ﻿
-namespace The2000s.ManageForm.User
+namespace The2000s.ManageForm.FormUser
 {
     partial class frmAddUser
     {

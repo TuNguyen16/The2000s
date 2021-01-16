@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using The2000s.ManageForm.Product;
-using The2000s.ManageForm.Order;
-using The2000s.ManageForm.User;
+using The2000s.ManageForm.FormProduct;
+using The2000s.ManageForm.FormOrder;
+using The2000s.ManageForm.FormUser;
 using The2000s.Models;
 
 namespace The2000s
@@ -49,11 +49,8 @@ namespace The2000s
                 return num.ToString();
             }
         }
-
-        private void frmMain_Load(object sender, EventArgs e)
+        private void UpdateInfo()
         {
-            lbWelcome.Text = "Chào mừng, " + loginUser.FullName;
-
             //--------------------Hiển thị thông số trên dashboard--------------------
             //Quy ước trạng thái đơn hàng
             //0. Đang xử lý
@@ -70,21 +67,28 @@ namespace The2000s
             lbEarned.Text = ShortNumber(earned) + " đồng";
             //---------------------Hiển thị đơn hàng mới (2 ngày)---------------------
             dgvOrderList.Rows.Clear();
-            foreach (Order o in context.Orders)
+            foreach (OrderDetail o in context.OrderDetails)
             {
-                if (DateTime.Compare((DateTime)o.CreatedAt,DateTime.Now.AddDays(-2)) >= 0 )
+                if (DateTime.Compare((DateTime)o.Order.CreatedAt, DateTime.Now.AddDays(-2)) >= 0)
                 {
                     int i = dgvOrderList.Rows.Add();
                     dgvOrderList.Rows[i].Cells[0].Value = i + 1;
-                    dgvOrderList.Rows[i].Cells[1].Value = i + 1;
-                    dgvOrderList.Rows[i].Cells[2].Value = i + 1;
-                    dgvOrderList.Rows[i].Cells[3].Value = i + 1;
-                    dgvOrderList.Rows[i].Cells[4].Value = i + 1;
-                    dgvOrderList.Rows[i].Cells[5].Value = i + 1;
-                    dgvOrderList.Rows[i].Cells[6].Value = i + 1;
+                    dgvOrderList.Rows[i].Cells[1].Value = o.OrderID;
+                    dgvOrderList.Rows[i].Cells[2].Value = o.Order.Customer.CustomerName;
+                    dgvOrderList.Rows[i].Cells[3].Value = o.Product.ProductName;
+                    dgvOrderList.Rows[i].Cells[4].Value = o.Amount;
+                    dgvOrderList.Rows[i].Cells[5].Value = o.Price;
+                    dgvOrderList.Rows[i].Cells[6].Value = (o.Order.Status == 0) ? "Đang xử lý" : ((o.Order.Status == 1) ? "Đã giao hàng" : "Đã hủy đơn");
                     dgvOrderList.Rows[i].Cells[7].Value = i + 1;
                 }
             }
+        }
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            lbWelcome.Text = "Chào mừng, " + loginUser.FullName;
+
+            //Gọi hàm Update thông số
+            UpdateInfo();
         }
 
         #region Click Event
