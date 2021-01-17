@@ -29,28 +29,20 @@ namespace The2000s.ManageForm.FormOrder
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.dgvOrderList = new System.Windows.Forms.DataGridView();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnReport = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.No = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Product = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DateCreate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderList)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 15.75F);
-            this.label1.Location = new System.Drawing.Point(372, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(204, 24);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Danh sách đơn hàng";
             // 
             // dgvOrderList
             // 
@@ -61,17 +53,61 @@ namespace The2000s.ManageForm.FormOrder
             this.No,
             this.ID,
             this.CustomerName,
-            this.Product,
-            this.Amount,
-            this.Price,
             this.Status,
             this.DateCreate});
-            this.dgvOrderList.Location = new System.Drawing.Point(12, 37);
+            this.dgvOrderList.Location = new System.Drawing.Point(6, 19);
             this.dgvOrderList.Name = "dgvOrderList";
             this.dgvOrderList.ReadOnly = true;
             this.dgvOrderList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvOrderList.Size = new System.Drawing.Size(905, 471);
+            this.dgvOrderList.Size = new System.Drawing.Size(552, 471);
             this.dgvOrderList.TabIndex = 5;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dgvOrderList);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(568, 499);
+            this.groupBox1.TabIndex = 6;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Danh sách đơn hàng";
+            // 
+            // btnReport
+            // 
+            this.btnReport.Location = new System.Drawing.Point(453, 513);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(128, 23);
+            this.btnReport.TabIndex = 7;
+            this.btnReport.Text = "Xem báo cáo đơn hàng";
+            this.btnReport.UseVisualStyleBackColor = true;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(356, 513);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(91, 23);
+            this.btnAdd.TabIndex = 8;
+            this.btnAdd.Text = "Thêm đơn hàng";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(18, 518);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Tổng số";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(70, 515);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(66, 20);
+            this.textBox1.TabIndex = 10;
             // 
             // No
             // 
@@ -92,27 +128,7 @@ namespace The2000s.ManageForm.FormOrder
             this.CustomerName.HeaderText = "Khách hàng";
             this.CustomerName.Name = "CustomerName";
             this.CustomerName.ReadOnly = true;
-            this.CustomerName.Width = 135;
-            // 
-            // Product
-            // 
-            this.Product.HeaderText = "Sản phẩm";
-            this.Product.Name = "Product";
-            this.Product.ReadOnly = true;
-            this.Product.Width = 160;
-            // 
-            // Amount
-            // 
-            this.Amount.HeaderText = "Số lượng";
-            this.Amount.Name = "Amount";
-            this.Amount.ReadOnly = true;
-            this.Amount.Width = 80;
-            // 
-            // Price
-            // 
-            this.Price.HeaderText = "Giá trị";
-            this.Price.Name = "Price";
-            this.Price.ReadOnly = true;
+            this.CustomerName.Width = 150;
             // 
             // Status
             // 
@@ -131,26 +147,31 @@ namespace The2000s.ManageForm.FormOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(929, 520);
-            this.Controls.Add(this.dgvOrderList);
+            this.ClientSize = new System.Drawing.Size(586, 542);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.btnReport);
+            this.Controls.Add(this.groupBox1);
             this.Name = "frmListOrder";
-            this.Text = "Danh sách đơn hàng";
+            this.Text = "Quản lý đơn hàng";
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderList)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvOrderList;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnReport;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn No;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn CustomerName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Product;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
         private System.Windows.Forms.DataGridViewTextBoxColumn DateCreate;
     }

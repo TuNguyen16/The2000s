@@ -91,12 +91,6 @@
     <Compile Include="ManageForm\FormOrder\frmListOrder.Designer.cs">
       <DependentUpon>frmListOrder.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageForm\FormProduct\frmAddProduct.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ManageForm\FormProduct\frmAddProduct.Designer.cs">
-      <DependentUpon>frmAddProduct.cs</DependentUpon>
-    </Compile>
     <Compile Include="ManageForm\FormProduct\frmListProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,11 +103,11 @@
     <Compile Include="ManageForm\FormProduct\frmListProductCategory.Designer.cs">
       <DependentUpon>frmListProductCategory.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageForm\FormUser\frmAddUser.cs">
+    <Compile Include="ManageForm\FormStorage\frmListStorage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageForm\FormUser\frmAddUser.Designer.cs">
-      <DependentUpon>frmAddUser.cs</DependentUpon>
+    <Compile Include="ManageForm\FormStorage\frmListStorage.Designer.cs">
+      <DependentUpon>frmListStorage.cs</DependentUpon>
     </Compile>
     <Compile Include="ManageForm\FormUser\frmListUser.cs">
       <SubType>Form</SubType>
@@ -147,17 +141,11 @@
     <EmbeddedResource Include="ManageForm\FormOrder\frmListOrder.resx">
       <DependentUpon>frmListOrder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageForm\FormProduct\frmAddProduct.resx">
-      <DependentUpon>frmAddProduct.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ManageForm\FormProduct\frmListProduct.resx">
       <DependentUpon>frmListProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageForm\FormProduct\frmListProductCategory.resx">
       <DependentUpon>frmListProductCategory.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ManageForm\FormUser\frmAddUser.resx">
-      <DependentUpon>frmAddUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageForm\FormUser\frmListUser.resx">
       <DependentUpon>frmListUser.cs</DependentUpon>
@@ -187,6 +175,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="ManageForm\FormCustomer\" />
     <Folder Include="ManageForm\FormSearchStat\" />
     <Folder Include="Resources\" />
   </ItemGroup>

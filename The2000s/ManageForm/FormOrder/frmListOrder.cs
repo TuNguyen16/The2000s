@@ -16,5 +16,15 @@ namespace The2000s.ManageForm.FormOrder
         {
             InitializeComponent();
         }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

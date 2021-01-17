@@ -30,10 +30,28 @@ namespace The2000s.ManageForm.FormUser
         private void InitializeComponent()
         {
             this.dgvUserList = new System.Windows.Forms.DataGridView();
+            this.No = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UserID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Role = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pass = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RoleID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.U_CreatedAt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtCreatedAt = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtUserID = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.cbPermission = new System.Windows.Forms.ComboBox();
@@ -46,24 +64,6 @@ namespace The2000s.ManageForm.FormUser
             this.label1 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.btnExit = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.txtAddress = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtUserID = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtCreatedAt = new System.Windows.Forms.TextBox();
-            this.No = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UserID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Role = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pass = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RoleID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.U_CreatedAt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserList)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -92,6 +92,76 @@ namespace The2000s.ManageForm.FormUser
             this.dgvUserList.Size = new System.Drawing.Size(646, 390);
             this.dgvUserList.TabIndex = 2;
             this.dgvUserList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUserList_CellClick);
+            // 
+            // No
+            // 
+            this.No.HeaderText = "#";
+            this.No.Name = "No";
+            this.No.ReadOnly = true;
+            this.No.Width = 30;
+            // 
+            // UserID
+            // 
+            this.UserID.HeaderText = "UserID";
+            this.UserID.Name = "UserID";
+            this.UserID.ReadOnly = true;
+            this.UserID.Visible = false;
+            // 
+            // FullName
+            // 
+            this.FullName.HeaderText = "Họ tên";
+            this.FullName.Name = "FullName";
+            this.FullName.ReadOnly = true;
+            this.FullName.Width = 140;
+            // 
+            // Email
+            // 
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            this.Email.Width = 165;
+            // 
+            // Role
+            // 
+            this.Role.HeaderText = "Quyền";
+            this.Role.Name = "Role";
+            this.Role.ReadOnly = true;
+            this.Role.Width = 115;
+            // 
+            // Username
+            // 
+            this.Username.HeaderText = "Tên người dùng";
+            this.Username.Name = "Username";
+            this.Username.ReadOnly = true;
+            this.Username.Width = 150;
+            // 
+            // Pass
+            // 
+            this.Pass.HeaderText = "Pass";
+            this.Pass.Name = "Pass";
+            this.Pass.ReadOnly = true;
+            this.Pass.Visible = false;
+            // 
+            // RoleID
+            // 
+            this.RoleID.HeaderText = "RoleID";
+            this.RoleID.Name = "RoleID";
+            this.RoleID.ReadOnly = true;
+            this.RoleID.Visible = false;
+            // 
+            // Address
+            // 
+            this.Address.HeaderText = "Address";
+            this.Address.Name = "Address";
+            this.Address.ReadOnly = true;
+            this.Address.Visible = false;
+            // 
+            // U_CreatedAt
+            // 
+            this.U_CreatedAt.HeaderText = "U_CreatedAt";
+            this.U_CreatedAt.Name = "U_CreatedAt";
+            this.U_CreatedAt.ReadOnly = true;
+            this.U_CreatedAt.Visible = false;
             // 
             // groupBox1
             // 
@@ -150,6 +220,72 @@ namespace The2000s.ManageForm.FormUser
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin người dùng";
+            // 
+            // txtCreatedAt
+            // 
+            this.txtCreatedAt.Enabled = false;
+            this.txtCreatedAt.Location = new System.Drawing.Point(94, 207);
+            this.txtCreatedAt.Name = "txtCreatedAt";
+            this.txtCreatedAt.Size = new System.Drawing.Size(152, 20);
+            this.txtCreatedAt.TabIndex = 8;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 210);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(50, 13);
+            this.label9.TabIndex = 20;
+            this.label9.Text = "Ngày tạo";
+            // 
+            // txtUserID
+            // 
+            this.txtUserID.Location = new System.Drawing.Point(94, 22);
+            this.txtUserID.Name = "txtUserID";
+            this.txtUserID.Size = new System.Drawing.Size(152, 20);
+            this.txtUserID.TabIndex = 1;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 25);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(78, 13);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Mã người dùng";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 79);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(40, 13);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Địa chỉ";
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.Location = new System.Drawing.Point(94, 76);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(152, 20);
+            this.txtAddress.TabIndex = 3;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(94, 154);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(152, 20);
+            this.txtPassword.TabIndex = 6;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 157);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(52, 13);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Mật khẩu";
             // 
             // btnDelete
             // 
@@ -255,142 +391,6 @@ namespace The2000s.ManageForm.FormUser
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 157);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 13);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "Mật khẩu";
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Location = new System.Drawing.Point(94, 154);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(152, 20);
-            this.txtPassword.TabIndex = 6;
-            // 
-            // txtAddress
-            // 
-            this.txtAddress.Location = new System.Drawing.Point(94, 76);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(152, 20);
-            this.txtAddress.TabIndex = 3;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 79);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(40, 13);
-            this.label7.TabIndex = 18;
-            this.label7.Text = "Địa chỉ";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 25);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(78, 13);
-            this.label8.TabIndex = 19;
-            this.label8.Text = "Mã người dùng";
-            // 
-            // txtUserID
-            // 
-            this.txtUserID.Location = new System.Drawing.Point(94, 22);
-            this.txtUserID.Name = "txtUserID";
-            this.txtUserID.Size = new System.Drawing.Size(152, 20);
-            this.txtUserID.TabIndex = 1;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 210);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(50, 13);
-            this.label9.TabIndex = 20;
-            this.label9.Text = "Ngày tạo";
-            // 
-            // txtCreatedAt
-            // 
-            this.txtCreatedAt.Enabled = false;
-            this.txtCreatedAt.Location = new System.Drawing.Point(94, 207);
-            this.txtCreatedAt.Name = "txtCreatedAt";
-            this.txtCreatedAt.Size = new System.Drawing.Size(152, 20);
-            this.txtCreatedAt.TabIndex = 8;
-            // 
-            // No
-            // 
-            this.No.HeaderText = "#";
-            this.No.Name = "No";
-            this.No.ReadOnly = true;
-            this.No.Width = 30;
-            // 
-            // UserID
-            // 
-            this.UserID.HeaderText = "UserID";
-            this.UserID.Name = "UserID";
-            this.UserID.ReadOnly = true;
-            this.UserID.Visible = false;
-            // 
-            // FullName
-            // 
-            this.FullName.HeaderText = "Họ tên";
-            this.FullName.Name = "FullName";
-            this.FullName.ReadOnly = true;
-            this.FullName.Width = 140;
-            // 
-            // Email
-            // 
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            this.Email.Width = 165;
-            // 
-            // Role
-            // 
-            this.Role.HeaderText = "Quyền";
-            this.Role.Name = "Role";
-            this.Role.ReadOnly = true;
-            this.Role.Width = 115;
-            // 
-            // Username
-            // 
-            this.Username.HeaderText = "Tên người dùng";
-            this.Username.Name = "Username";
-            this.Username.ReadOnly = true;
-            this.Username.Width = 150;
-            // 
-            // Pass
-            // 
-            this.Pass.HeaderText = "Pass";
-            this.Pass.Name = "Pass";
-            this.Pass.ReadOnly = true;
-            this.Pass.Visible = false;
-            // 
-            // RoleID
-            // 
-            this.RoleID.HeaderText = "RoleID";
-            this.RoleID.Name = "RoleID";
-            this.RoleID.ReadOnly = true;
-            this.RoleID.Visible = false;
-            // 
-            // Address
-            // 
-            this.Address.HeaderText = "Address";
-            this.Address.Name = "Address";
-            this.Address.ReadOnly = true;
-            this.Address.Visible = false;
-            // 
-            // U_CreatedAt
-            // 
-            this.U_CreatedAt.HeaderText = "U_CreatedAt";
-            this.U_CreatedAt.Name = "U_CreatedAt";
-            this.U_CreatedAt.ReadOnly = true;
-            this.U_CreatedAt.Visible = false;
-            // 
             // frmListUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -404,6 +404,7 @@ namespace The2000s.ManageForm.FormUser
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "frmListUser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý người dùng";
             this.Load += new System.EventHandler(this.frmListUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserList)).EndInit();

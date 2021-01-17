@@ -40,10 +40,6 @@ namespace The2000s
             {
                 return (double)num / 1000000 + "triệu";
             }
-            else if(num > 1000)
-            {
-                return (double)num / 1000 + "nghìn";
-            }
             else
             {
                 return num.ToString();
@@ -62,7 +58,7 @@ namespace The2000s
             int earned = 0;
             foreach (OrderDetail o in context.OrderDetails)
             {
-                earned += (int)(o.Amount * o.Price);
+                earned += (int)(o.Amount * o.Product.Price);
             }
             lbEarned.Text = ShortNumber(earned) + " đồng";
             //---------------------Hiển thị đơn hàng mới (2 ngày)---------------------
@@ -77,9 +73,9 @@ namespace The2000s
                     dgvOrderList.Rows[i].Cells[2].Value = o.Order.Customer.CustomerName;
                     dgvOrderList.Rows[i].Cells[3].Value = o.Product.ProductName;
                     dgvOrderList.Rows[i].Cells[4].Value = o.Amount;
-                    dgvOrderList.Rows[i].Cells[5].Value = o.Price;
+                    dgvOrderList.Rows[i].Cells[5].Value = o.Product.Price;
                     dgvOrderList.Rows[i].Cells[6].Value = (o.Order.Status == 0) ? "Đang xử lý" : ((o.Order.Status == 1) ? "Đã giao hàng" : "Đã hủy đơn");
-                    dgvOrderList.Rows[i].Cells[7].Value = i + 1;
+                    dgvOrderList.Rows[i].Cells[7].Value = o.Order.CreatedAt;
                 }
             }
         }
@@ -100,7 +96,7 @@ namespace The2000s
 
         private void listProduct_Click(object sender, EventArgs e)
         {
-            frmListProduct list = new frmListProduct();
+            frmListProduct list = new frmListProduct(loginUser.UserID);
             list.Show();
         }
 
@@ -126,12 +122,6 @@ namespace The2000s
         {
             frmListUser luser = new frmListUser(loginUser.UserID);
             luser.Show();
-        }
-
-        private void addUser_Click(object sender, EventArgs e)
-        {
-            frmAddUser auser = new frmAddUser();
-            auser.Show();
         }
         #endregion
     }

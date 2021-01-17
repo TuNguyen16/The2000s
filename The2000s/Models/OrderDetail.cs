@@ -20,8 +20,6 @@ namespace The2000s.Models
 
         public int? Amount { get; set; }
 
-        public int? Price { get; set; }
-
         public virtual Order Order { get; set; }
 
         public virtual Product Product { get; set; }

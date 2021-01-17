@@ -121,8 +121,12 @@ namespace The2000s.ManageForm.FormUser
         {
             try
             {
-                if (txtFullName.Text == "" || txtAddress.Text == "" || txtEmail.Text == "" || txtUsername.Text == "" ||
-                    txtPassword.Text == "")
+                if (txtUserID.Text == "")
+                {
+                    throw new Exception("Vui lòng nhập user ID cần sửa");
+                }
+                if (txtFullName.Text == "" || txtAddress.Text == "" || txtEmail.Text == "" || 
+                    txtUsername.Text == "" || txtPassword.Text == "")
                 {
                     throw new Exception("Vui lòng nhập đầy đủ thông tin");
                 }
