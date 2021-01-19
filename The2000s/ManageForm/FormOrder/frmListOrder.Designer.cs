@@ -34,7 +34,7 @@ namespace The2000s.ManageForm.FormOrder
             this.btnReport = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTotal = new System.Windows.Forms.TextBox();
             this.No = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -101,13 +101,13 @@ namespace The2000s.ManageForm.FormOrder
             this.label1.TabIndex = 9;
             this.label1.Text = "Tổng số";
             // 
-            // textBox1
+            // txtTotal
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(70, 515);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(66, 20);
-            this.textBox1.TabIndex = 10;
+            this.txtTotal.Enabled = false;
+            this.txtTotal.Location = new System.Drawing.Point(70, 515);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(66, 20);
+            this.txtTotal.TabIndex = 10;
             // 
             // No
             // 
@@ -148,13 +148,14 @@ namespace The2000s.ManageForm.FormOrder
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(586, 542);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnReport);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmListOrder";
             this.Text = "Quản lý đơn hàng";
+            this.Load += new System.EventHandler(this.frmListOrder_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderList)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -168,7 +169,7 @@ namespace The2000s.ManageForm.FormOrder
         private System.Windows.Forms.Button btnReport;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.DataGridViewTextBoxColumn No;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn CustomerName;

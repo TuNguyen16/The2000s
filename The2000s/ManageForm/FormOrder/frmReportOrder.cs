@@ -8,23 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace The2000s.ManageForm.FormStorage
+namespace The2000s.ManageForm.FormOrder
 {
-    public partial class frmListStorage : Form
+    public partial class frmReportOrder : Form
     {
-        public frmListStorage()
+        public frmReportOrder()
         {
             InitializeComponent();
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void frmReportOrder_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            this.reportViewer1.RefreshReport();
         }
     }
 }

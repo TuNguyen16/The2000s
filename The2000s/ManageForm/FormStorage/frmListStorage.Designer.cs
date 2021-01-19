@@ -29,12 +29,140 @@ namespace The2000s.ManageForm.FormStorage
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dgvImportList = new System.Windows.Forms.DataGridView();
+            this.No = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ImportID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SupName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CreatedAt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvImportList)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dgvImportList);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(543, 491);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Danh sách đơn nhập hàng";
+            // 
+            // dgvImportList
+            // 
+            this.dgvImportList.AllowUserToAddRows = false;
+            this.dgvImportList.AllowUserToDeleteRows = false;
+            this.dgvImportList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvImportList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.No,
+            this.ImportID,
+            this.SupName,
+            this.CreatedAt});
+            this.dgvImportList.Location = new System.Drawing.Point(6, 19);
+            this.dgvImportList.Name = "dgvImportList";
+            this.dgvImportList.ReadOnly = true;
+            this.dgvImportList.Size = new System.Drawing.Size(531, 466);
+            this.dgvImportList.TabIndex = 0;
+            // 
+            // No
+            // 
+            this.No.HeaderText = "#";
+            this.No.Name = "No";
+            this.No.ReadOnly = true;
+            this.No.Width = 30;
+            // 
+            // ImportID
+            // 
+            this.ImportID.HeaderText = "Mã đơn nhập";
+            this.ImportID.Name = "ImportID";
+            this.ImportID.ReadOnly = true;
+            // 
+            // SupName
+            // 
+            this.SupName.HeaderText = "Tên nhà cung cấp";
+            this.SupName.Name = "SupName";
+            this.SupName.ReadOnly = true;
+            this.SupName.Width = 200;
+            // 
+            // CreatedAt
+            // 
+            this.CreatedAt.HeaderText = "Ngày tạo";
+            this.CreatedAt.Name = "CreatedAt";
+            this.CreatedAt.ReadOnly = true;
+            this.CreatedAt.Width = 150;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(15, 511);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Tổng số";
+            // 
+            // txtTotal
+            // 
+            this.txtTotal.Enabled = false;
+            this.txtTotal.Location = new System.Drawing.Point(67, 508);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(64, 20);
+            this.txtTotal.TabIndex = 2;
+            // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(495, 506);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(60, 23);
+            this.btnExit.TabIndex = 3;
+            this.btnExit.Text = "Đóng";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(395, 506);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(94, 23);
+            this.btnAdd.TabIndex = 4;
+            this.btnAdd.Text = "Thêm đơn nhập";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // frmListStorage
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "frmListStorage";
+            this.ClientSize = new System.Drawing.Size(564, 533);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.txtTotal);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.groupBox1);
+            this.Name = "frmListStorage";
+            this.Text = "Quản lý đơn nhập hàng";
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvImportList)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridView dgvImportList;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtTotal;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn No;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ImportID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SupName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CreatedAt;
     }
 }

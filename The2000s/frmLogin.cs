@@ -38,7 +38,7 @@ namespace The2000s
                 {
                     roleid = (int)u.RoleID;
                     userid = (int)u.UserID;
-                    MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
                     this.DialogResult = DialogResult.OK;
                     this.Close();
                 }

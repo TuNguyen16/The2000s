@@ -10,7 +10,10 @@ using System.Windows.Forms;
 using The2000s.ManageForm.FormProduct;
 using The2000s.ManageForm.FormOrder;
 using The2000s.ManageForm.FormUser;
+using The2000s.ManageForm.FormCustomer;
 using The2000s.Models;
+using The2000s.ManageForm.FormStorage;
+using System.Globalization;
 
 namespace The2000s
 {
@@ -34,15 +37,15 @@ namespace The2000s
         {
             if (num > 1000000000)
             {
-                return (double)num / 1000000000 + "tỷ";
+                return ((double)num / 1000000000).ToString("N1", CultureInfo.InvariantCulture) + " tỷ";
             }
             else if(num > 1000000)
             {
-                return (double)num / 1000000 + "triệu";
+                return ((double)num / 1000000).ToString("N1", CultureInfo.InvariantCulture) + " triệu";
             }
             else
             {
-                return num.ToString();
+                return num.ToString("N1", CultureInfo.InvariantCulture);
             }
         }
         private void UpdateInfo()
@@ -63,19 +66,25 @@ namespace The2000s
             lbEarned.Text = ShortNumber(earned) + " đồng";
             //---------------------Hiển thị đơn hàng mới (2 ngày)---------------------
             dgvOrderList.Rows.Clear();
-            foreach (OrderDetail o in context.OrderDetails)
+            foreach (Order o in context.Orders)
             {
-                if (DateTime.Compare((DateTime)o.Order.CreatedAt, DateTime.Now.AddDays(-2)) >= 0)
+                if (DateTime.Compare((DateTime)o.CreatedAt, DateTime.Now.AddDays(-2)) >= 0)
                 {
                     int i = dgvOrderList.Rows.Add();
+                    int totalPrice = 0;
+                    foreach (OrderDetail od in context.OrderDetails)
+                    {
+                        if (od.OrderID == o.OrderID)
+                        {
+                            totalPrice += Convert.ToInt32(od.Amount * od.Product.Price);
+                        }
+                    }
                     dgvOrderList.Rows[i].Cells[0].Value = i + 1;
                     dgvOrderList.Rows[i].Cells[1].Value = o.OrderID;
-                    dgvOrderList.Rows[i].Cells[2].Value = o.Order.Customer.CustomerName;
-                    dgvOrderList.Rows[i].Cells[3].Value = o.Product.ProductName;
-                    dgvOrderList.Rows[i].Cells[4].Value = o.Amount;
-                    dgvOrderList.Rows[i].Cells[5].Value = o.Product.Price;
-                    dgvOrderList.Rows[i].Cells[6].Value = (o.Order.Status == 0) ? "Đang xử lý" : ((o.Order.Status == 1) ? "Đã giao hàng" : "Đã hủy đơn");
-                    dgvOrderList.Rows[i].Cells[7].Value = o.Order.CreatedAt;
+                    dgvOrderList.Rows[i].Cells[2].Value = o.Customer.CustomerName;
+                    dgvOrderList.Rows[i].Cells[3].Value = totalPrice;
+                    dgvOrderList.Rows[i].Cells[4].Value = (o.Status == 0) ? "Đang xử lý" : (o.Status == 1 ? "Đã giao hàng" : "Đã hủy đơn") ;
+                    dgvOrderList.Rows[i].Cells[5].Value = o.CreatedAt;
                 }
             }
         }
@@ -88,41 +97,55 @@ namespace The2000s
         }
 
         #region Click Event
-        private void addProduct_Click(object sender, EventArgs e)
-        {
-            frmAddProduct add = new frmAddProduct();
-            add.Show();
-        }
 
         private void listProduct_Click(object sender, EventArgs e)
         {
             frmListProduct list = new frmListProduct(loginUser.UserID);
             list.Show();
+            UpdateInfo();
         }
 
         private void productCategory_Click(object sender, EventArgs e)
         {
             frmListProductCategory pcat = new frmListProductCategory();
             pcat.Show();
+            UpdateInfo();
         }
 
         private void orderList_Click(object sender, EventArgs e)
         {
-            frmListOrder olist = new frmListOrder();
+            frmListOrder olist = new frmListOrder(loginUser.UserID);
             olist.Show();
-        }
-
-        private void addOrder_Click(object sender, EventArgs e)
-        {
-            frmAddOrder addOrder = new frmAddOrder();
-            addOrder.Show();
+            UpdateInfo();
         }
 
         private void listUser_Click(object sender, EventArgs e)
         {
             frmListUser luser = new frmListUser(loginUser.UserID);
             luser.Show();
+            UpdateInfo();
+        }
+        
+        private void listCustomer_Click(object sender, EventArgs e)
+        {
+            frmListCustomer lcus = new frmListCustomer();
+            lcus.Show();
+            UpdateInfo();
         }
         #endregion
+
+        private void QL_Storage_Click(object sender, EventArgs e)
+        {
+            frmListStorage lsto = new frmListStorage();
+            lsto.Show();
+            UpdateInfo();
+        }
+
+        private void QL_Supplier_Click(object sender, EventArgs e)
+        {
+            frmListSupplier lsup = new frmListSupplier();
+            lsup.Show();
+            UpdateInfo();
+        }
     }
 }
