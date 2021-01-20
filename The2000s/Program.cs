@@ -27,10 +27,10 @@ namespace The2000s
                         Application.Run(new frmAdmin(login.userid));
                         break;
                     case 2:
-                        Application.Run(new frmNVBH());
+                        Application.Run(new frmNVBH(login.userid));
                         break;
                     case 3:
-                        Application.Run(new frmNVKho());
+                        Application.Run(new frmNVKho(login.userid));
                         break;
                 }
                 

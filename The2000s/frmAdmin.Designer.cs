@@ -29,7 +29,7 @@ namespace The2000s
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.menuFeature = new System.Windows.Forms.MenuStrip();
             this.menuProduct = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,15 +60,15 @@ namespace The2000s
             this.label4 = new System.Windows.Forms.Label();
             this.lbCancel = new System.Windows.Forms.Label();
             this.dgvOrderList = new System.Windows.Forms.DataGridView();
-            this.lbWelcome = new System.Windows.Forms.Label();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.lbRole = new System.Windows.Forms.Label();
             this.No = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DateCreate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lbWelcome = new System.Windows.Forms.Label();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.lbRole = new System.Windows.Forms.Label();
             this.menuFeature.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -80,6 +80,7 @@ namespace The2000s
             // 
             // menuFeature
             // 
+            this.menuFeature.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuFeature.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuProduct,
             this.menuOrder,
@@ -89,7 +90,7 @@ namespace The2000s
             this.menuStat});
             this.menuFeature.Location = new System.Drawing.Point(0, 0);
             this.menuFeature.Name = "menuFeature";
-            this.menuFeature.Size = new System.Drawing.Size(923, 24);
+            this.menuFeature.Size = new System.Drawing.Size(923, 25);
             this.menuFeature.TabIndex = 1;
             this.menuFeature.Text = "menuStrip1";
             // 
@@ -100,20 +101,20 @@ namespace The2000s
             this.QL_ProductCategory});
             this.menuProduct.ForeColor = System.Drawing.Color.Black;
             this.menuProduct.Name = "menuProduct";
-            this.menuProduct.Size = new System.Drawing.Size(72, 20);
+            this.menuProduct.Size = new System.Drawing.Size(76, 21);
             this.menuProduct.Text = "Sản phẩm";
             // 
             // QL_Product
             // 
             this.QL_Product.Name = "QL_Product";
-            this.QL_Product.Size = new System.Drawing.Size(170, 22);
+            this.QL_Product.Size = new System.Drawing.Size(176, 22);
             this.QL_Product.Text = "Quản lý sản phẩm";
             this.QL_Product.Click += new System.EventHandler(this.listProduct_Click);
             // 
             // QL_ProductCategory
             // 
             this.QL_ProductCategory.Name = "QL_ProductCategory";
-            this.QL_ProductCategory.Size = new System.Drawing.Size(170, 22);
+            this.QL_ProductCategory.Size = new System.Drawing.Size(176, 22);
             this.QL_ProductCategory.Text = "QL loại sản phẩm";
             this.QL_ProductCategory.Click += new System.EventHandler(this.productCategory_Click);
             // 
@@ -123,13 +124,13 @@ namespace The2000s
             this.QL_Order});
             this.menuOrder.ForeColor = System.Drawing.Color.Black;
             this.menuOrder.Name = "menuOrder";
-            this.menuOrder.Size = new System.Drawing.Size(69, 20);
+            this.menuOrder.Size = new System.Drawing.Size(73, 21);
             this.menuOrder.Text = "Bán hàng";
             // 
             // QL_Order
             // 
             this.QL_Order.Name = "QL_Order";
-            this.QL_Order.Size = new System.Drawing.Size(169, 22);
+            this.QL_Order.Size = new System.Drawing.Size(173, 22);
             this.QL_Order.Text = "Quản lý đơn hàng";
             this.QL_Order.Click += new System.EventHandler(this.orderList_Click);
             // 
@@ -140,20 +141,20 @@ namespace The2000s
             this.QL_Supplier});
             this.menuStorage.ForeColor = System.Drawing.Color.Black;
             this.menuStorage.Name = "menuStorage";
-            this.menuStorage.Size = new System.Drawing.Size(70, 20);
+            this.menuStorage.Size = new System.Drawing.Size(72, 21);
             this.menuStorage.Text = "Kho hàng";
             // 
             // QL_Storage
             // 
             this.QL_Storage.Name = "QL_Storage";
-            this.QL_Storage.Size = new System.Drawing.Size(199, 22);
+            this.QL_Storage.Size = new System.Drawing.Size(204, 22);
             this.QL_Storage.Text = "Quản lý đơn nhập hàng";
             this.QL_Storage.Click += new System.EventHandler(this.QL_Storage_Click);
             // 
             // QL_Supplier
             // 
             this.QL_Supplier.Name = "QL_Supplier";
-            this.QL_Supplier.Size = new System.Drawing.Size(199, 22);
+            this.QL_Supplier.Size = new System.Drawing.Size(204, 22);
             this.QL_Supplier.Text = "Quản lý nhà cung cấp";
             this.QL_Supplier.Click += new System.EventHandler(this.QL_Supplier_Click);
             // 
@@ -163,13 +164,13 @@ namespace The2000s
             this.listCustomer});
             this.menuCustomer.ForeColor = System.Drawing.Color.Black;
             this.menuCustomer.Name = "menuCustomer";
-            this.menuCustomer.Size = new System.Drawing.Size(82, 20);
+            this.menuCustomer.Size = new System.Drawing.Size(85, 21);
             this.menuCustomer.Text = "Khách hàng";
             // 
             // listCustomer
             // 
             this.listCustomer.Name = "listCustomer";
-            this.listCustomer.Size = new System.Drawing.Size(180, 22);
+            this.listCustomer.Size = new System.Drawing.Size(185, 22);
             this.listCustomer.Text = "Quản lý khách hàng";
             this.listCustomer.Click += new System.EventHandler(this.listCustomer_Click);
             // 
@@ -179,13 +180,13 @@ namespace The2000s
             this.listUser});
             this.menuUser.ForeColor = System.Drawing.Color.Black;
             this.menuUser.Name = "menuUser";
-            this.menuUser.Size = new System.Drawing.Size(84, 20);
+            this.menuUser.Size = new System.Drawing.Size(87, 21);
             this.menuUser.Text = "Người Dùng";
             // 
             // listUser
             // 
             this.listUser.Name = "listUser";
-            this.listUser.Size = new System.Drawing.Size(180, 22);
+            this.listUser.Size = new System.Drawing.Size(184, 22);
             this.listUser.Text = "Quản lý người dùng";
             this.listUser.Click += new System.EventHandler(this.listUser_Click);
             // 
@@ -196,19 +197,19 @@ namespace The2000s
             this.thốngKêToolStripMenuItem});
             this.menuStat.ForeColor = System.Drawing.Color.Black;
             this.menuStat.Name = "menuStat";
-            this.menuStat.Size = new System.Drawing.Size(122, 20);
+            this.menuStat.Size = new System.Drawing.Size(130, 21);
             this.menuStat.Text = "Tra cứu và thống kê";
             // 
             // tìmKiếmToolStripMenuItem
             // 
             this.tìmKiếmToolStripMenuItem.Name = "tìmKiếmToolStripMenuItem";
-            this.tìmKiếmToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tìmKiếmToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.tìmKiếmToolStripMenuItem.Text = "Tìm kiếm";
             // 
             // thốngKêToolStripMenuItem
             // 
             this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
-            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.thốngKêToolStripMenuItem.Text = "Thống kê";
             // 
             // groupBox1
@@ -370,43 +371,11 @@ namespace The2000s
             this.dgvOrderList.Location = new System.Drawing.Point(10, 19);
             this.dgvOrderList.Name = "dgvOrderList";
             this.dgvOrderList.ReadOnly = true;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dgvOrderList.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.dgvOrderList.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvOrderList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvOrderList.Size = new System.Drawing.Size(888, 279);
             this.dgvOrderList.TabIndex = 4;
-            // 
-            // lbWelcome
-            // 
-            this.lbWelcome.AutoSize = true;
-            this.lbWelcome.Font = new System.Drawing.Font("Open Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbWelcome.ForeColor = System.Drawing.Color.Black;
-            this.lbWelcome.Location = new System.Drawing.Point(12, 24);
-            this.lbWelcome.Name = "lbWelcome";
-            this.lbWelcome.Size = new System.Drawing.Size(252, 28);
-            this.lbWelcome.TabIndex = 5;
-            this.lbWelcome.Text = "Chào mừng, Username";
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.dgvOrderList);
-            this.groupBox5.Location = new System.Drawing.Point(13, 158);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(905, 304);
-            this.groupBox5.TabIndex = 6;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Đơn hàng mới";
-            // 
-            // lbRole
-            // 
-            this.lbRole.AutoSize = true;
-            this.lbRole.Font = new System.Drawing.Font("Open Sans", 16F, System.Drawing.FontStyle.Bold);
-            this.lbRole.ForeColor = System.Drawing.Color.Black;
-            this.lbRole.Location = new System.Drawing.Point(760, 24);
-            this.lbRole.Name = "lbRole";
-            this.lbRole.Size = new System.Drawing.Size(158, 30);
-            this.lbRole.TabIndex = 7;
-            this.lbRole.Text = "Quản trị viên";
             // 
             // No
             // 
@@ -447,6 +416,39 @@ namespace The2000s
             this.DateCreate.Name = "DateCreate";
             this.DateCreate.ReadOnly = true;
             this.DateCreate.Width = 145;
+            // 
+            // lbWelcome
+            // 
+            this.lbWelcome.AutoSize = true;
+            this.lbWelcome.Font = new System.Drawing.Font("Open Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbWelcome.ForeColor = System.Drawing.Color.Black;
+            this.lbWelcome.Location = new System.Drawing.Point(12, 24);
+            this.lbWelcome.Name = "lbWelcome";
+            this.lbWelcome.Size = new System.Drawing.Size(252, 28);
+            this.lbWelcome.TabIndex = 5;
+            this.lbWelcome.Text = "Chào mừng, Username";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.dgvOrderList);
+            this.groupBox5.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox5.Location = new System.Drawing.Point(13, 158);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(905, 304);
+            this.groupBox5.TabIndex = 6;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Đơn hàng mới";
+            // 
+            // lbRole
+            // 
+            this.lbRole.AutoSize = true;
+            this.lbRole.Font = new System.Drawing.Font("Open Sans", 16F, System.Drawing.FontStyle.Bold);
+            this.lbRole.ForeColor = System.Drawing.Color.Black;
+            this.lbRole.Location = new System.Drawing.Point(760, 24);
+            this.lbRole.Name = "lbRole";
+            this.lbRole.Size = new System.Drawing.Size(158, 30);
+            this.lbRole.TabIndex = 7;
+            this.lbRole.Text = "Quản trị viên";
             // 
             // frmAdmin
             // 

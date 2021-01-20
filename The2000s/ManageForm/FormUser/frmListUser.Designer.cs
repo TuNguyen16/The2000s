@@ -166,6 +166,7 @@ namespace The2000s.ManageForm.FormUser
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dgvUserList);
+            this.groupBox1.Font = new System.Drawing.Font("Open Sans", 8F);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(660, 418);
@@ -175,7 +176,7 @@ namespace The2000s.ManageForm.FormUser
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(51, 245);
+            this.btnAdd.Location = new System.Drawing.Point(41, 235);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(54, 23);
             this.btnAdd.TabIndex = 9;
@@ -185,7 +186,7 @@ namespace The2000s.ManageForm.FormUser
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(111, 245);
+            this.btnEdit.Location = new System.Drawing.Point(101, 235);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(48, 23);
             this.btnEdit.TabIndex = 10;
@@ -214,9 +215,10 @@ namespace The2000s.ManageForm.FormUser
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.btnAdd);
             this.groupBox2.Controls.Add(this.btnEdit);
+            this.groupBox2.Font = new System.Drawing.Font("Open Sans", 8F);
             this.groupBox2.Location = new System.Drawing.Point(682, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(252, 274);
+            this.groupBox2.Size = new System.Drawing.Size(252, 269);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin người dùng";
@@ -224,9 +226,9 @@ namespace The2000s.ManageForm.FormUser
             // txtCreatedAt
             // 
             this.txtCreatedAt.Enabled = false;
-            this.txtCreatedAt.Location = new System.Drawing.Point(94, 207);
+            this.txtCreatedAt.Location = new System.Drawing.Point(98, 207);
             this.txtCreatedAt.Name = "txtCreatedAt";
-            this.txtCreatedAt.Size = new System.Drawing.Size(152, 20);
+            this.txtCreatedAt.Size = new System.Drawing.Size(148, 22);
             this.txtCreatedAt.TabIndex = 8;
             // 
             // label9
@@ -234,15 +236,15 @@ namespace The2000s.ManageForm.FormUser
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(6, 210);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(50, 13);
+            this.label9.Size = new System.Drawing.Size(53, 15);
             this.label9.TabIndex = 20;
             this.label9.Text = "Ngày tạo";
             // 
             // txtUserID
             // 
-            this.txtUserID.Location = new System.Drawing.Point(94, 22);
+            this.txtUserID.Location = new System.Drawing.Point(98, 22);
             this.txtUserID.Name = "txtUserID";
-            this.txtUserID.Size = new System.Drawing.Size(152, 20);
+            this.txtUserID.Size = new System.Drawing.Size(148, 22);
             this.txtUserID.TabIndex = 1;
             // 
             // label8
@@ -250,7 +252,7 @@ namespace The2000s.ManageForm.FormUser
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(6, 25);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(78, 13);
+            this.label8.Size = new System.Drawing.Size(86, 15);
             this.label8.TabIndex = 19;
             this.label8.Text = "Mã người dùng";
             // 
@@ -259,23 +261,23 @@ namespace The2000s.ManageForm.FormUser
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(6, 79);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(40, 13);
+            this.label7.Size = new System.Drawing.Size(42, 15);
             this.label7.TabIndex = 18;
             this.label7.Text = "Địa chỉ";
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(94, 76);
+            this.txtAddress.Location = new System.Drawing.Point(98, 76);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(152, 20);
+            this.txtAddress.Size = new System.Drawing.Size(148, 22);
             this.txtAddress.TabIndex = 3;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(94, 154);
+            this.txtPassword.Location = new System.Drawing.Point(98, 154);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(152, 20);
+            this.txtPassword.Size = new System.Drawing.Size(148, 22);
             this.txtPassword.TabIndex = 6;
             // 
             // label6
@@ -283,13 +285,13 @@ namespace The2000s.ManageForm.FormUser
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(6, 157);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 13);
+            this.label6.Size = new System.Drawing.Size(56, 15);
             this.label6.TabIndex = 15;
             this.label6.Text = "Mật khẩu";
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(165, 245);
+            this.btnDelete.Location = new System.Drawing.Point(155, 235);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(48, 23);
             this.btnDelete.TabIndex = 11;
@@ -302,16 +304,16 @@ namespace The2000s.ManageForm.FormUser
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(6, 183);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 13);
+            this.label5.Size = new System.Drawing.Size(42, 15);
             this.label5.TabIndex = 13;
             this.label5.Text = "Quyền";
             // 
             // cbPermission
             // 
             this.cbPermission.FormattingEnabled = true;
-            this.cbPermission.Location = new System.Drawing.Point(94, 180);
+            this.cbPermission.Location = new System.Drawing.Point(98, 180);
             this.cbPermission.Name = "cbPermission";
-            this.cbPermission.Size = new System.Drawing.Size(152, 21);
+            this.cbPermission.Size = new System.Drawing.Size(148, 23);
             this.cbPermission.TabIndex = 7;
             // 
             // label4
@@ -319,22 +321,22 @@ namespace The2000s.ManageForm.FormUser
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(6, 131);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 13);
+            this.label4.Size = new System.Drawing.Size(89, 15);
             this.label4.TabIndex = 11;
             this.label4.Text = "Tên người dùng";
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(94, 128);
+            this.txtUsername.Location = new System.Drawing.Point(98, 128);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(152, 20);
+            this.txtUsername.Size = new System.Drawing.Size(148, 22);
             this.txtUsername.TabIndex = 5;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(94, 102);
+            this.txtEmail.Location = new System.Drawing.Point(98, 102);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(152, 20);
+            this.txtEmail.Size = new System.Drawing.Size(148, 22);
             this.txtEmail.TabIndex = 4;
             // 
             // label3
@@ -342,15 +344,15 @@ namespace The2000s.ManageForm.FormUser
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(6, 105);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 13);
+            this.label3.Size = new System.Drawing.Size(35, 15);
             this.label3.TabIndex = 8;
             this.label3.Text = "Email";
             // 
             // txtFullName
             // 
-            this.txtFullName.Location = new System.Drawing.Point(94, 48);
+            this.txtFullName.Location = new System.Drawing.Point(98, 48);
             this.txtFullName.Name = "txtFullName";
-            this.txtFullName.Size = new System.Drawing.Size(152, 20);
+            this.txtFullName.Size = new System.Drawing.Size(148, 22);
             this.txtFullName.TabIndex = 2;
             // 
             // label2
@@ -358,31 +360,34 @@ namespace The2000s.ManageForm.FormUser
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(6, 51);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 13);
+            this.label2.Size = new System.Drawing.Size(42, 15);
             this.label2.TabIndex = 6;
             this.label2.Text = "Họ tên";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Open Sans", 8F);
             this.label1.Location = new System.Drawing.Point(12, 437);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.Size = new System.Drawing.Size(48, 15);
             this.label1.TabIndex = 7;
             this.label1.Text = "Tổng số";
             // 
             // txtTotal
             // 
             this.txtTotal.Enabled = false;
+            this.txtTotal.Font = new System.Drawing.Font("Open Sans", 8F);
             this.txtTotal.Location = new System.Drawing.Point(64, 434);
             this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(60, 20);
+            this.txtTotal.Size = new System.Drawing.Size(60, 22);
             this.txtTotal.TabIndex = 8;
             this.txtTotal.Text = "0";
             this.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnExit
             // 
+            this.btnExit.Font = new System.Drawing.Font("Open Sans", 8F);
             this.btnExit.Location = new System.Drawing.Point(618, 432);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(54, 23);

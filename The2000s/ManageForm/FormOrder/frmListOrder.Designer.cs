@@ -30,16 +30,16 @@ namespace The2000s.ManageForm.FormOrder
         private void InitializeComponent()
         {
             this.dgvOrderList = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnReport = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtTotal = new System.Windows.Forms.TextBox();
             this.No = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DateCreate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnReport = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtTotal = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderList)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -61,53 +61,6 @@ namespace The2000s.ManageForm.FormOrder
             this.dgvOrderList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvOrderList.Size = new System.Drawing.Size(552, 471);
             this.dgvOrderList.TabIndex = 5;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.dgvOrderList);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(568, 499);
-            this.groupBox1.TabIndex = 6;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Danh sách đơn hàng";
-            // 
-            // btnReport
-            // 
-            this.btnReport.Location = new System.Drawing.Point(453, 513);
-            this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(128, 23);
-            this.btnReport.TabIndex = 7;
-            this.btnReport.Text = "Xem báo cáo đơn hàng";
-            this.btnReport.UseVisualStyleBackColor = true;
-            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(356, 513);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(91, 23);
-            this.btnAdd.TabIndex = 8;
-            this.btnAdd.Text = "Thêm đơn hàng";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 518);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Tổng số";
-            // 
-            // txtTotal
-            // 
-            this.txtTotal.Enabled = false;
-            this.txtTotal.Location = new System.Drawing.Point(70, 515);
-            this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(66, 20);
-            this.txtTotal.TabIndex = 10;
             // 
             // No
             // 
@@ -142,6 +95,58 @@ namespace The2000s.ManageForm.FormOrder
             this.DateCreate.Name = "DateCreate";
             this.DateCreate.ReadOnly = true;
             this.DateCreate.Width = 145;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dgvOrderList);
+            this.groupBox1.Font = new System.Drawing.Font("Open Sans", 8F);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(568, 499);
+            this.groupBox1.TabIndex = 6;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Danh sách đơn hàng";
+            // 
+            // btnReport
+            // 
+            this.btnReport.Font = new System.Drawing.Font("Open Sans", 8F);
+            this.btnReport.Location = new System.Drawing.Point(453, 513);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(128, 23);
+            this.btnReport.TabIndex = 7;
+            this.btnReport.Text = "Xem báo cáo đơn hàng";
+            this.btnReport.UseVisualStyleBackColor = true;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Font = new System.Drawing.Font("Open Sans", 8F);
+            this.btnAdd.Location = new System.Drawing.Point(356, 513);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(91, 23);
+            this.btnAdd.TabIndex = 8;
+            this.btnAdd.Text = "Thêm đơn hàng";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Open Sans", 8F);
+            this.label1.Location = new System.Drawing.Point(18, 518);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 15);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Tổng số";
+            // 
+            // txtTotal
+            // 
+            this.txtTotal.Enabled = false;
+            this.txtTotal.Font = new System.Drawing.Font("Open Sans", 8F);
+            this.txtTotal.Location = new System.Drawing.Point(70, 515);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(66, 22);
+            this.txtTotal.TabIndex = 10;
             // 
             // frmListOrder
             // 

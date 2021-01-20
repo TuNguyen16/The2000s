@@ -29,6 +29,9 @@ namespace The2000s.ManageForm.FormOrder
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtCustomerID = new System.Windows.Forms.TextBox();
@@ -61,43 +64,53 @@ namespace The2000s.ManageForm.FormOrder
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label2.Font = new System.Drawing.Font("Open Sans", 8F);
             this.label2.Location = new System.Drawing.Point(15, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 13);
+            this.label2.Size = new System.Drawing.Size(86, 15);
             this.label2.TabIndex = 1;
             this.label2.Text = "Mã khách hàng";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label3.Font = new System.Drawing.Font("Open Sans", 8F);
             this.label3.Location = new System.Drawing.Point(15, 52);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 13);
+            this.label3.Size = new System.Drawing.Size(89, 15);
             this.label3.TabIndex = 2;
             this.label3.Text = "Tên khách hàng";
             // 
             // txtCustomerID
             // 
+            this.txtCustomerID.Font = new System.Drawing.Font("Open Sans", 8F);
             this.txtCustomerID.Location = new System.Drawing.Point(113, 23);
             this.txtCustomerID.Name = "txtCustomerID";
-            this.txtCustomerID.Size = new System.Drawing.Size(161, 20);
+            this.txtCustomerID.Size = new System.Drawing.Size(161, 22);
             this.txtCustomerID.TabIndex = 3;
             this.txtCustomerID.TextChanged += new System.EventHandler(this.txtCustomerID_TextChanged);
             // 
             // txtCustomerName
             // 
             this.txtCustomerName.Enabled = false;
+            this.txtCustomerName.Font = new System.Drawing.Font("Open Sans", 8F);
             this.txtCustomerName.Location = new System.Drawing.Point(113, 49);
             this.txtCustomerName.Name = "txtCustomerName";
-            this.txtCustomerName.Size = new System.Drawing.Size(161, 20);
+            this.txtCustomerName.Size = new System.Drawing.Size(161, 22);
             this.txtCustomerName.TabIndex = 4;
             // 
             // dgvProductList
             // 
             this.dgvProductList.AllowUserToAddRows = false;
             this.dgvProductList.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Open Sans", 8F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProductList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvProductList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProductList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.No,
@@ -106,9 +119,19 @@ namespace The2000s.ManageForm.FormOrder
             this.Amount,
             this.Price,
             this.Total});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Open Sans", 8F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvProductList.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvProductList.Location = new System.Drawing.Point(12, 12);
             this.dgvProductList.Name = "dgvProductList";
             this.dgvProductList.ReadOnly = true;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvProductList.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvProductList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProductList.Size = new System.Drawing.Size(628, 477);
             this.dgvProductList.TabIndex = 5;
@@ -156,10 +179,10 @@ namespace The2000s.ManageForm.FormOrder
             // 
             // btnAddOrder
             // 
-            this.btnAddOrder.Font = new System.Drawing.Font("Arial", 15F);
+            this.btnAddOrder.Font = new System.Drawing.Font("Open Sans", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddOrder.Location = new System.Drawing.Point(695, 253);
             this.btnAddOrder.Name = "btnAddOrder";
-            this.btnAddOrder.Size = new System.Drawing.Size(200, 32);
+            this.btnAddOrder.Size = new System.Drawing.Size(200, 38);
             this.btnAddOrder.TabIndex = 6;
             this.btnAddOrder.Text = "Thêm đơn hàng";
             this.btnAddOrder.UseVisualStyleBackColor = true;
@@ -168,19 +191,21 @@ namespace The2000s.ManageForm.FormOrder
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label4.Location = new System.Drawing.Point(417, 501);
+            this.label4.Font = new System.Drawing.Font("Open Sans", 8F);
+            this.label4.Location = new System.Drawing.Point(409, 501);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 13);
+            this.label4.Size = new System.Drawing.Size(109, 15);
             this.label4.TabIndex = 7;
             this.label4.Text = "Tổng tiền đơn hàng";
             // 
             // txtTotal
             // 
+            this.txtTotal.Enabled = false;
+            this.txtTotal.Font = new System.Drawing.Font("Open Sans", 8F);
             this.txtTotal.Location = new System.Drawing.Point(524, 498);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.ReadOnly = true;
-            this.txtTotal.Size = new System.Drawing.Size(116, 20);
+            this.txtTotal.Size = new System.Drawing.Size(116, 22);
             this.txtTotal.TabIndex = 8;
             this.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -190,6 +215,7 @@ namespace The2000s.ManageForm.FormOrder
             this.groupBox1.Controls.Add(this.txtCustomerID);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Font = new System.Drawing.Font("Open Sans", 8F);
             this.groupBox1.Location = new System.Drawing.Point(646, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(287, 86);
@@ -207,6 +233,7 @@ namespace The2000s.ManageForm.FormOrder
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Font = new System.Drawing.Font("Open Sans", 8F);
             this.groupBox2.Location = new System.Drawing.Point(647, 104);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(286, 143);
@@ -216,6 +243,7 @@ namespace The2000s.ManageForm.FormOrder
             // 
             // btnDelete
             // 
+            this.btnDelete.Font = new System.Drawing.Font("Open Sans", 8F);
             this.btnDelete.Location = new System.Drawing.Point(147, 107);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(72, 23);
@@ -226,29 +254,33 @@ namespace The2000s.ManageForm.FormOrder
             // 
             // txtAmount
             // 
+            this.txtAmount.Font = new System.Drawing.Font("Open Sans", 8F);
             this.txtAmount.Location = new System.Drawing.Point(111, 74);
             this.txtAmount.Name = "txtAmount";
-            this.txtAmount.Size = new System.Drawing.Size(70, 20);
+            this.txtAmount.Size = new System.Drawing.Size(70, 22);
             this.txtAmount.TabIndex = 10;
             // 
             // txtProductName
             // 
             this.txtProductName.Enabled = false;
+            this.txtProductName.Font = new System.Drawing.Font("Open Sans", 8F);
             this.txtProductName.Location = new System.Drawing.Point(111, 48);
             this.txtProductName.Name = "txtProductName";
-            this.txtProductName.Size = new System.Drawing.Size(161, 20);
+            this.txtProductName.Size = new System.Drawing.Size(161, 22);
             this.txtProductName.TabIndex = 9;
             // 
             // txtProductID
             // 
+            this.txtProductID.Font = new System.Drawing.Font("Open Sans", 8F);
             this.txtProductID.Location = new System.Drawing.Point(111, 22);
             this.txtProductID.Name = "txtProductID";
-            this.txtProductID.Size = new System.Drawing.Size(161, 20);
+            this.txtProductID.Size = new System.Drawing.Size(161, 22);
             this.txtProductID.TabIndex = 5;
             this.txtProductID.TextChanged += new System.EventHandler(this.txtProductID_TextChanged);
             // 
             // btnAdd
             // 
+            this.btnAdd.Font = new System.Drawing.Font("Open Sans", 8F);
             this.btnAdd.Location = new System.Drawing.Point(67, 107);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(74, 23);
@@ -260,30 +292,30 @@ namespace The2000s.ManageForm.FormOrder
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label6.Font = new System.Drawing.Font("Open Sans", 8F);
             this.label6.Location = new System.Drawing.Point(14, 77);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 13);
+            this.label6.Size = new System.Drawing.Size(53, 15);
             this.label6.TabIndex = 7;
             this.label6.Text = "Số lượng";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label5.Font = new System.Drawing.Font("Open Sans", 8F);
             this.label5.Location = new System.Drawing.Point(14, 51);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 13);
+            this.label5.Size = new System.Drawing.Size(80, 15);
             this.label5.TabIndex = 6;
             this.label5.Text = "Tên sản phẩm";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label1.Font = new System.Drawing.Font("Open Sans", 8F);
             this.label1.Location = new System.Drawing.Point(14, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 13);
+            this.label1.Size = new System.Drawing.Size(77, 15);
             this.label1.TabIndex = 5;
             this.label1.Text = "Mã sản phẩm";
             // 
@@ -298,6 +330,7 @@ namespace The2000s.ManageForm.FormOrder
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnAddOrder);
             this.Controls.Add(this.dgvProductList);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "frmAddOrder";
             this.Text = "Thêm đơn hàng";

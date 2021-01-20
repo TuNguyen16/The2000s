@@ -33,6 +33,8 @@ namespace The2000s.ManageForm.FormStorage
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtSupplierPhone = new System.Windows.Forms.TextBox();
             this.txtSupplierID = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -44,8 +46,6 @@ namespace The2000s.ManageForm.FormStorage
             this.btnEdit = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvSupplierList = new System.Windows.Forms.DataGridView();
-            this.txtSupplierPhone = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.No = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SupID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SupName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,6 +58,7 @@ namespace The2000s.ManageForm.FormStorage
             // 
             // btnExit
             // 
+            this.btnExit.Font = new System.Drawing.Font("Open Sans", 8F);
             this.btnExit.Location = new System.Drawing.Point(599, 431);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(54, 23);
@@ -69,9 +70,10 @@ namespace The2000s.ManageForm.FormStorage
             // txtTotal
             // 
             this.txtTotal.Enabled = false;
+            this.txtTotal.Font = new System.Drawing.Font("Open Sans", 8F);
             this.txtTotal.Location = new System.Drawing.Point(64, 434);
             this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(60, 20);
+            this.txtTotal.Size = new System.Drawing.Size(60, 22);
             this.txtTotal.TabIndex = 16;
             this.txtTotal.Text = "0";
             this.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -79,9 +81,10 @@ namespace The2000s.ManageForm.FormStorage
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Open Sans", 8F);
             this.label1.Location = new System.Drawing.Point(12, 437);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.Size = new System.Drawing.Size(48, 15);
             this.label1.TabIndex = 15;
             this.label1.Text = "Tổng số";
             // 
@@ -98,6 +101,7 @@ namespace The2000s.ManageForm.FormStorage
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.btnAdd);
             this.groupBox2.Controls.Add(this.btnEdit);
+            this.groupBox2.Font = new System.Drawing.Font("Open Sans", 8F);
             this.groupBox2.Location = new System.Drawing.Point(659, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(252, 163);
@@ -105,11 +109,27 @@ namespace The2000s.ManageForm.FormStorage
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin nhà cung cấp";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 103);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(27, 15);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "SĐT";
+            // 
+            // txtSupplierPhone
+            // 
+            this.txtSupplierPhone.Location = new System.Drawing.Point(94, 100);
+            this.txtSupplierPhone.Name = "txtSupplierPhone";
+            this.txtSupplierPhone.Size = new System.Drawing.Size(152, 22);
+            this.txtSupplierPhone.TabIndex = 20;
+            // 
             // txtSupplierID
             // 
             this.txtSupplierID.Location = new System.Drawing.Point(94, 22);
             this.txtSupplierID.Name = "txtSupplierID";
-            this.txtSupplierID.Size = new System.Drawing.Size(152, 20);
+            this.txtSupplierID.Size = new System.Drawing.Size(152, 22);
             this.txtSupplierID.TabIndex = 1;
             // 
             // label8
@@ -117,7 +137,7 @@ namespace The2000s.ManageForm.FormStorage
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(6, 25);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(60, 13);
+            this.label8.Size = new System.Drawing.Size(63, 15);
             this.label8.TabIndex = 19;
             this.label8.Text = "Mã nhà CC";
             // 
@@ -126,7 +146,7 @@ namespace The2000s.ManageForm.FormStorage
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(6, 77);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(40, 13);
+            this.label7.Size = new System.Drawing.Size(42, 15);
             this.label7.TabIndex = 18;
             this.label7.Text = "Địa chỉ";
             // 
@@ -134,7 +154,7 @@ namespace The2000s.ManageForm.FormStorage
             // 
             this.txtSupplierAddress.Location = new System.Drawing.Point(94, 74);
             this.txtSupplierAddress.Name = "txtSupplierAddress";
-            this.txtSupplierAddress.Size = new System.Drawing.Size(152, 20);
+            this.txtSupplierAddress.Size = new System.Drawing.Size(152, 22);
             this.txtSupplierAddress.TabIndex = 3;
             // 
             // btnDelete
@@ -151,7 +171,7 @@ namespace The2000s.ManageForm.FormStorage
             // 
             this.txtSupplierName.Location = new System.Drawing.Point(94, 48);
             this.txtSupplierName.Name = "txtSupplierName";
-            this.txtSupplierName.Size = new System.Drawing.Size(152, 20);
+            this.txtSupplierName.Size = new System.Drawing.Size(152, 22);
             this.txtSupplierName.TabIndex = 2;
             // 
             // label2
@@ -159,7 +179,7 @@ namespace The2000s.ManageForm.FormStorage
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(6, 51);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 13);
+            this.label2.Size = new System.Drawing.Size(66, 15);
             this.label2.TabIndex = 6;
             this.label2.Text = "Tên nhà CC";
             // 
@@ -186,6 +206,7 @@ namespace The2000s.ManageForm.FormStorage
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dgvSupplierList);
+            this.groupBox1.Font = new System.Drawing.Font("Open Sans", 8F);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(641, 418);
@@ -211,22 +232,6 @@ namespace The2000s.ManageForm.FormStorage
             this.dgvSupplierList.Size = new System.Drawing.Size(626, 390);
             this.dgvSupplierList.TabIndex = 2;
             this.dgvSupplierList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSupplierList_CellClick);
-            // 
-            // txtSupplierPhone
-            // 
-            this.txtSupplierPhone.Location = new System.Drawing.Point(94, 100);
-            this.txtSupplierPhone.Name = "txtSupplierPhone";
-            this.txtSupplierPhone.Size = new System.Drawing.Size(152, 20);
-            this.txtSupplierPhone.TabIndex = 20;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 103);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 13);
-            this.label3.TabIndex = 21;
-            this.label3.Text = "SĐT";
             // 
             // No
             // 
