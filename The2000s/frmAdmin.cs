@@ -25,6 +25,7 @@ namespace The2000s
         {
             InitializeComponent();
             LoadUser(userid);
+            this.DialogResult = DialogResult.No;
         }
 
         private void LoadUser(int userid)
@@ -39,7 +40,7 @@ namespace The2000s
             {
                 return ((double)num / 1000000000).ToString("N1", CultureInfo.InvariantCulture) + " tỷ";
             }
-            else if(num > 1000000)
+            else if (num > 1000000)
             {
                 return ((double)num / 1000000).ToString("N1", CultureInfo.InvariantCulture) + " triệu";
             }
@@ -82,9 +83,11 @@ namespace The2000s
                     dgvOrderList.Rows[i].Cells[0].Value = i + 1;
                     dgvOrderList.Rows[i].Cells[1].Value = o.OrderID;
                     dgvOrderList.Rows[i].Cells[2].Value = o.Customer.CustomerName;
-                    dgvOrderList.Rows[i].Cells[3].Value = totalPrice;
-                    dgvOrderList.Rows[i].Cells[4].Value = (o.Status == 0) ? "Đang xử lý" : (o.Status == 1 ? "Đã giao hàng" : "Đã hủy đơn") ;
-                    dgvOrderList.Rows[i].Cells[5].Value = o.CreatedAt;
+                    dgvOrderList.Rows[i].Cells[4].Value = o.Customer.Address;
+                    dgvOrderList.Rows[i].Cells[3].Value = o.Customer.Phone;
+                    dgvOrderList.Rows[i].Cells[5].Value = totalPrice;
+                    dgvOrderList.Rows[i].Cells[6].Value = (o.Status == 0) ? "Đang xử lý" : (o.Status == 1 ? "Đã giao hàng" : "Đã hủy đơn");
+                    dgvOrderList.Rows[i].Cells[7].Value = o.CreatedAt;
                 }
             }
         }
@@ -125,7 +128,7 @@ namespace The2000s
             luser.Show();
             UpdateInfo();
         }
-        
+
         private void listCustomer_Click(object sender, EventArgs e)
         {
             frmListCustomer lcus = new frmListCustomer();
@@ -146,6 +149,16 @@ namespace The2000s
             frmListSupplier lsup = new frmListSupplier();
             lsup.Show();
             UpdateInfo();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            DialogResult rs = MessageBox.Show("Bạn có muốn đăng xuất", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (rs == DialogResult.Yes)
+            {
+                this.DialogResult = DialogResult.Yes;
+                this.Close();
+            }
         }
     }
 }

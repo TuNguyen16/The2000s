@@ -21,16 +21,22 @@ namespace The2000s
             InitializeComponent();
         }
 
+        private void ResetForm()
+        {
+            txtUsername.Text = "";
+            txtPassword.Text = "";
+        }
         private void btnLogin_Click(object sender, EventArgs e)
         {
             try
             {
+                DialogResult rs = DialogResult.No;
                 User u = context.Users.FirstOrDefault(p => p.Username == txtUsername.Text);
                 if (u == null)
                 {
                     throw new Exception("Tên người dùng này không tồn tại!");
                 }
-                else if(u.Password != txtPassword.Text)
+                else if (u.Password != txtPassword.Text)
                 {
                     throw new Exception("Mật khẩu không chính xác");
                 }
@@ -38,9 +44,33 @@ namespace The2000s
                 {
                     roleid = (int)u.RoleID;
                     userid = (int)u.UserID;
-                    
-                    this.DialogResult = DialogResult.OK;
-                    this.Close();
+
+                    Hide();
+
+                    switch (roleid)
+                    {
+                        case 1:
+                            frmAdmin a = new frmAdmin(userid);
+                            rs = a.ShowDialog();
+                            break;
+                        case 2:
+                            frmNVBH b = new frmNVBH(userid);
+                            rs = b.ShowDialog();
+                            break;
+                        case 3:
+                            frmNVKho c = new frmNVKho(userid);
+                            rs = c.ShowDialog();
+                            break;
+                    }
+                    if (rs == DialogResult.Yes)
+                    {
+                        ResetForm();
+                        Show();
+                    }
+                    else
+                    {
+                        Close();
+                    }
                 }
             }
             catch (Exception ex)

@@ -158,6 +158,8 @@ namespace The2000s.ManageForm.FormOrder
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnReport);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmListOrder";
             this.Text = "Quản lý đơn hàng";
             this.Load += new System.EventHandler(this.frmListOrder_Load);

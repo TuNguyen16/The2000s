@@ -58,12 +58,15 @@ namespace The2000s
             this.No = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.p = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.add = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DateCreate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbWelcome = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.lbRole = new System.Windows.Forms.Label();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.menuFeature.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -318,6 +321,8 @@ namespace The2000s
             this.No,
             this.ID,
             this.CustomerName,
+            this.p,
+            this.add,
             this.Price,
             this.Status,
             this.DateCreate});
@@ -351,6 +356,18 @@ namespace The2000s
             this.CustomerName.ReadOnly = true;
             this.CustomerName.Width = 170;
             // 
+            // p
+            // 
+            this.p.HeaderText = "SĐT";
+            this.p.Name = "p";
+            this.p.ReadOnly = true;
+            // 
+            // add
+            // 
+            this.add.HeaderText = "Địa chỉ";
+            this.add.Name = "add";
+            this.add.ReadOnly = true;
+            // 
             // Price
             // 
             this.Price.HeaderText = "Giá trị";
@@ -368,7 +385,7 @@ namespace The2000s
             this.DateCreate.HeaderText = "Thời gian";
             this.DateCreate.Name = "DateCreate";
             this.DateCreate.ReadOnly = true;
-            this.DateCreate.Width = 145;
+            this.DateCreate.Width = 165;
             // 
             // lbWelcome
             // 
@@ -403,11 +420,23 @@ namespace The2000s
             this.lbRole.TabIndex = 7;
             this.lbRole.Text = "Nhân viên bán hàng";
             // 
+            // btnLogout
+            // 
+            this.btnLogout.ForeColor = System.Drawing.Color.Black;
+            this.btnLogout.Location = new System.Drawing.Point(840, 468);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(75, 23);
+            this.btnLogout.TabIndex = 9;
+            this.btnLogout.Text = "Đăng xuất";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
             // frmNVBH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(923, 470);
+            this.ClientSize = new System.Drawing.Size(923, 498);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.lbRole);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.lbWelcome);
@@ -473,8 +502,11 @@ namespace The2000s
         private System.Windows.Forms.DataGridViewTextBoxColumn No;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn CustomerName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn p;
+        private System.Windows.Forms.DataGridViewTextBoxColumn add;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
         private System.Windows.Forms.DataGridViewTextBoxColumn DateCreate;
+        private System.Windows.Forms.Button btnLogout;
     }
 }

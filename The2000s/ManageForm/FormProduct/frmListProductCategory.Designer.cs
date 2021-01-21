@@ -232,6 +232,8 @@ namespace The2000s.ManageForm.FormProduct
             this.ClientSize = new System.Drawing.Size(655, 495);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmListProductCategory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý loại sản phẩm";

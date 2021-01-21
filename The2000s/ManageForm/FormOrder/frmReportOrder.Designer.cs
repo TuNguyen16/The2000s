@@ -46,6 +46,8 @@ namespace The2000s.ManageForm.FormOrder
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(946, 546);
             this.Controls.Add(this.reportViewer1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmReportOrder";
             this.Text = "Báo cáo đơn hàng";
             this.Load += new System.EventHandler(this.frmReportOrder_Load);

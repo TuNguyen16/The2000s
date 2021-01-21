@@ -50,41 +50,37 @@ namespace The2000s
         }
         private void UpdateInfo()
         {
-            //--------------------Hiển thị thông số trên dashboard--------------------
-            //Quy ước trạng thái đơn hàng
-            //0. Đang xử lý
-            //1. Thành công
-            //2. Đã hủy đơn
-            lbSuccess.Text = context.Orders.Count(p => p.Status == 1).ToString();
-            lbProcessing.Text = context.Orders.Count(p => p.Status == 0).ToString();
-            lbCancel.Text = context.Orders.Count(p => p.Status == 2).ToString();
+            
+            lbSuccess.Text = context.ImportProducts.ToList().Count.ToString();
+            int sell = Convert.ToInt32(context.OrderDetails.Sum(p => p.Amount));
+            int cur = Convert.ToInt32(context.ImportProductDetails.Sum(p => p.Amount));
+            lbProcessing.Text = (cur - sell).ToString();
             int earned = 0;
-            foreach (OrderDetail o in context.OrderDetails)
+            foreach (ImportProductDetail o in context.ImportProductDetails)
             {
-                earned += (int)(o.Amount * o.Product.Price);
+                earned += (int)(o.Amount * o.BuyPrice);
             }
             lbEarned.Text = ShortNumber(earned) + " đồng";
-            //---------------------Hiển thị đơn hàng mới (2 ngày)---------------------
+            //---------------------Hiển thị đơn nhập hàng mới (2 ngày)---------------------
             dgvOrderList.Rows.Clear();
-            foreach (Order o in context.Orders)
+            foreach (ImportProduct o in context.ImportProducts)
             {
                 if (DateTime.Compare((DateTime)o.CreatedAt, DateTime.Now.AddDays(-2)) >= 0)
                 {
                     int i = dgvOrderList.Rows.Add();
                     int totalPrice = 0;
-                    foreach (OrderDetail od in context.OrderDetails)
+                    foreach (ImportProductDetail od in context.ImportProductDetails)
                     {
-                        if (od.OrderID == o.OrderID)
+                        if (od.ImportID == o.ImportID)
                         {
-                            totalPrice += Convert.ToInt32(od.Amount * od.Product.Price);
+                            totalPrice += Convert.ToInt32(od.Amount * od.BuyPrice);
                         }
                     }
                     dgvOrderList.Rows[i].Cells[0].Value = i + 1;
-                    dgvOrderList.Rows[i].Cells[1].Value = o.OrderID;
-                    dgvOrderList.Rows[i].Cells[2].Value = o.Customer.CustomerName;
+                    dgvOrderList.Rows[i].Cells[1].Value = o.ImportID;
+                    dgvOrderList.Rows[i].Cells[2].Value = o.Supplier.SupplierName;
                     dgvOrderList.Rows[i].Cells[3].Value = totalPrice;
-                    dgvOrderList.Rows[i].Cells[4].Value = (o.Status == 0) ? "Đang xử lý" : (o.Status == 1 ? "Đã giao hàng" : "Đã hủy đơn") ;
-                    dgvOrderList.Rows[i].Cells[5].Value = o.CreatedAt;
+                    dgvOrderList.Rows[i].Cells[4].Value = o.CreatedAt;
                 }
             }
         }
@@ -146,6 +142,21 @@ namespace The2000s
             frmListSupplier lsup = new frmListSupplier();
             lsup.Show();
             UpdateInfo();
+        }
+
+        private void lbRole_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            DialogResult rs = MessageBox.Show("Bạn có muốn đăng xuất", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (rs == DialogResult.Yes)
+            {
+                this.DialogResult = DialogResult.Yes;
+                this.Close();
+            }
         }
     }
 }

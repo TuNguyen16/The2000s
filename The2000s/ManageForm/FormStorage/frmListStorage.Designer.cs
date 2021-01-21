@@ -160,6 +160,8 @@ namespace The2000s.ManageForm.FormStorage
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmListStorage";
             this.Text = "Quản lý đơn nhập hàng";
             this.Load += new System.EventHandler(this.frmListStorage_Load);

@@ -29,7 +29,7 @@ namespace The2000s
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.menuFeature = new System.Windows.Forms.MenuStrip();
             this.menuProduct = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,12 +63,15 @@ namespace The2000s
             this.No = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CusAdd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DateCreate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbWelcome = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.lbRole = new System.Windows.Forms.Label();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.menuFeature.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -365,14 +368,16 @@ namespace The2000s
             this.No,
             this.ID,
             this.CustomerName,
+            this.phone,
+            this.CusAdd,
             this.Price,
             this.Status,
             this.DateCreate});
             this.dgvOrderList.Location = new System.Drawing.Point(10, 19);
             this.dgvOrderList.Name = "dgvOrderList";
             this.dgvOrderList.ReadOnly = true;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.dgvOrderList.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dgvOrderList.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvOrderList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvOrderList.Size = new System.Drawing.Size(888, 279);
             this.dgvOrderList.TabIndex = 4;
@@ -398,6 +403,18 @@ namespace The2000s
             this.CustomerName.ReadOnly = true;
             this.CustomerName.Width = 170;
             // 
+            // phone
+            // 
+            this.phone.HeaderText = "SĐT";
+            this.phone.Name = "phone";
+            this.phone.ReadOnly = true;
+            // 
+            // CusAdd
+            // 
+            this.CusAdd.HeaderText = "Địa chỉ";
+            this.CusAdd.Name = "CusAdd";
+            this.CusAdd.ReadOnly = true;
+            // 
             // Price
             // 
             this.Price.HeaderText = "Giá trị";
@@ -415,7 +432,7 @@ namespace The2000s
             this.DateCreate.HeaderText = "Thời gian";
             this.DateCreate.Name = "DateCreate";
             this.DateCreate.ReadOnly = true;
-            this.DateCreate.Width = 145;
+            this.DateCreate.Width = 165;
             // 
             // lbWelcome
             // 
@@ -450,11 +467,23 @@ namespace The2000s
             this.lbRole.TabIndex = 7;
             this.lbRole.Text = "Quản trị viên";
             // 
+            // btnLogout
+            // 
+            this.btnLogout.ForeColor = System.Drawing.Color.Black;
+            this.btnLogout.Location = new System.Drawing.Point(836, 462);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(75, 23);
+            this.btnLogout.TabIndex = 8;
+            this.btnLogout.Text = "Đăng xuất";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(923, 470);
+            this.ClientSize = new System.Drawing.Size(923, 491);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.lbRole);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.lbWelcome);
@@ -525,8 +554,11 @@ namespace The2000s
         private System.Windows.Forms.DataGridViewTextBoxColumn No;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn CustomerName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CusAdd;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
         private System.Windows.Forms.DataGridViewTextBoxColumn DateCreate;
+        private System.Windows.Forms.Button btnLogout;
     }
 }
