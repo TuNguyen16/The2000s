@@ -76,6 +76,8 @@ namespace The2000s
                     if (rs == DialogResult.Yes)
                     {
                         ResetForm();
+                        context = null;
+                        context = new DB_Context();
                         Show();
                     }
                     else

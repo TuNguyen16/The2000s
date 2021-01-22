@@ -160,6 +160,12 @@
     <Compile Include="ManageForm\FormUser\frmListUser.Designer.cs">
       <DependentUpon>frmListUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageForm\FormUser\frmProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageForm\FormUser\frmProfile.Designer.cs">
+      <DependentUpon>frmProfile.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\DB_Context.cs" />
     <Compile Include="Models\ImportProduct.cs" />
@@ -216,6 +222,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ManageForm\FormUser\frmListUser.resx">
       <DependentUpon>frmListUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageForm\FormUser\frmProfile.resx">
+      <DependentUpon>frmProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -159,5 +159,11 @@ namespace The2000s
                 this.Close();
             }
         }
+
+        private void menuProfile_Click(object sender, EventArgs e)
+        {
+            frmProfile profile = new frmProfile(loginUser.UserID);
+            profile.Show();
+        }
     }
 }

@@ -112,7 +112,6 @@ namespace The2000s
         {
             frmListProductCategory pcat = new frmListProductCategory();
             pcat.Show();
-            UpdateInfo();
         }
 
         private void orderList_Click(object sender, EventArgs e)
@@ -126,16 +125,14 @@ namespace The2000s
         {
             frmListUser luser = new frmListUser(loginUser.UserID);
             luser.Show();
-            UpdateInfo();
         }
 
         private void listCustomer_Click(object sender, EventArgs e)
         {
             frmListCustomer lcus = new frmListCustomer();
             lcus.Show();
-            UpdateInfo();
         }
-        #endregion
+        
 
         private void QL_Storage_Click(object sender, EventArgs e)
         {
@@ -150,7 +147,7 @@ namespace The2000s
             lsup.Show();
             UpdateInfo();
         }
-
+        #endregion
         private void btnLogout_Click(object sender, EventArgs e)
         {
             DialogResult rs = MessageBox.Show("Bạn có muốn đăng xuất", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
@@ -159,6 +156,12 @@ namespace The2000s
                 this.DialogResult = DialogResult.Yes;
                 this.Close();
             }
+        }
+
+        private void menuProfile_Click(object sender, EventArgs e)
+        {
+            frmProfile profile = new frmProfile(loginUser.UserID);
+            profile.Show();
         }
     }
 }
