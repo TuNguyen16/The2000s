@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -93,13 +95,22 @@ namespace The2000s.ManageForm.FormUser
                 {
                     throw new Exception("Vui lòng nhập đầy đủ thông tin");
                 }
+                SHA256 sha256 = SHA256.Create();
+                byte[] byteArray = Encoding.ASCII.GetBytes(txtPassword.Text);
+                MemoryStream stream = new MemoryStream(byteArray);
+                byte[] hash = sha256.ComputeHash(stream);
+                StringBuilder pass = new StringBuilder(hash.Length * 2);
+                foreach (byte b in hash)
+                {
+                    pass.AppendFormat("{0:x2}", b);
+                }
                 User tmp = new User()
                 {
                     FullName = txtFullName.Text,
                     Address = txtAddress.Text,
                     Email = txtEmail.Text,
                     Username = txtUsername.Text,
-                    Password = txtPassword.Text, //TODO: Encrypt Password
+                    Password = pass.ToString(),
                     CreatedAt = DateTime.Now,
                     CreatedBy = userid,
                     RoleID = (int?)cbPermission.SelectedValue
@@ -134,11 +145,28 @@ namespace The2000s.ManageForm.FormUser
                 User edit = context.Users.FirstOrDefault(p => p.UserID == euid);
                 if (edit != null)
                 {
+                    if (txtPassword.Text != edit.Password)
+                    {
+                        //Encrypt Pass-----------------------
+                        SHA256 sha256 = SHA256.Create();
+                        byte[] byteArray = Encoding.ASCII.GetBytes(txtPassword.Text);
+                        MemoryStream stream = new MemoryStream(byteArray);
+                        byte[] hash = sha256.ComputeHash(stream);
+                        StringBuilder pass = new StringBuilder(hash.Length * 2);
+                        foreach (byte b in hash)
+                        {
+                            pass.AppendFormat("{0:x2}", b);
+                        }
+
+                        //----------------------------------
+                        
+                        edit.Password = pass.ToString();
+                        
+                    }
                     edit.FullName = txtFullName.Text;
                     edit.Address = txtAddress.Text;
                     edit.Email = txtEmail.Text;
                     edit.Username = txtUsername.Text;
-                    edit.Password = txtPassword.Text; //TODO: Encrypt Password
                     edit.RoleID = (int)cbPermission.SelectedValue;
                 }
                 else

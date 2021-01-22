@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,6 +37,7 @@ namespace The2000s.ManageForm.FormProduct
                 dgvProductList.Rows[i].Cells[6].Value = (p.Status == 0) ? "Công khai" : "Ngừng bán" ;
                 dgvProductList.Rows[i].Cells[7].Value = p.CatID;
                 dgvProductList.Rows[i].Cells[8].Value = p.Status;
+                dgvProductList.Rows[i].Cells[9].Value = p.Img;
                 total++;
             }
             txtTotal.Text = total.ToString();
@@ -49,6 +51,7 @@ namespace The2000s.ManageForm.FormProduct
             txtCreatedBy.Text = "";
             cbProductCategory.SelectedIndex = 0;
             optPublic.Checked = true;
+            pbProduct.ImageLocation = "";
         }
 
         private void frmListProduct_Load(object sender, EventArgs e)
@@ -164,7 +167,40 @@ namespace The2000s.ManageForm.FormProduct
 
         private void btnSelectPic_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Tính năng đang được xây dựng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            try
+            {
+                if (txtProductID.Text == "")
+                {
+                    throw new Exception("Vui lòng nhập mã sản phẩm");
+                }
+                int pid = Convert.ToInt32(txtProductID.Text);
+                Product pro = context.Products.FirstOrDefault(p => p.ProductID == pid);
+                if (pro == null)
+                {
+                    throw new Exception("Không tìm thấy sản phẩm có mã này");
+                }
+                OpenFileDialog open = new OpenFileDialog();
+                open.RestoreDirectory = true;
+                open.Filter = "Image Files|*.jpg;*.png";
+                if (open.ShowDialog() == DialogResult.OK)
+                {
+                    if (!Directory.Exists("image"))
+                    {
+                        Directory.CreateDirectory("image");
+                    }
+                    File.Copy(open.FileName, @"image\" + open.SafeFileName);
+                    pro.Img = @"image\" + open.SafeFileName;
+                    context.SaveChanges();
+                    LoadGrid();
+                    ResetValue();
+                    MessageBox.Show("Thêm hình thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         private void dgvProductList_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -184,6 +220,14 @@ namespace The2000s.ManageForm.FormProduct
                 else
                 {
                     optStopSell.Checked = true;
+                }
+                if (dgvProductList.Rows[i].Cells[9].Value != null)
+                {
+                    pbProduct.ImageLocation = dgvProductList.Rows[i].Cells[9].Value.ToString();
+                }
+                else
+                {
+                    pbProduct.ImageLocation = "";
                 }
             }
             catch (ArgumentOutOfRangeException)

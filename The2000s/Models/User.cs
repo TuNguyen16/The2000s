@@ -29,7 +29,7 @@ namespace The2000s.Models
         [StringLength(50)]
         public string Username { get; set; }
 
-        [StringLength(50)]
+        [StringLength(64)]
         public string Password { get; set; }
 
         public DateTime? CreatedAt { get; set; }

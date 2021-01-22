@@ -30,6 +30,16 @@ namespace The2000s.ManageForm.FormProduct
         private void InitializeComponent()
         {
             this.dgvProductList = new System.Windows.Forms.DataGridView();
+            this.No = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SellPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CreateDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.catid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.img = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.optStopSell = new System.Windows.Forms.RadioButton();
@@ -46,7 +56,7 @@ namespace The2000s.ManageForm.FormProduct
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtCreatedBy = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbProduct = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtCreatedAt = new System.Windows.Forms.TextBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
@@ -56,19 +66,10 @@ namespace The2000s.ManageForm.FormProduct
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
-            this.No = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SellPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CreateDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.catid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductList)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProduct)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvProductList
@@ -85,7 +86,8 @@ namespace The2000s.ManageForm.FormProduct
             this.CreateDate,
             this.Status,
             this.catid,
-            this.statusid});
+            this.statusid,
+            this.img});
             this.dgvProductList.Location = new System.Drawing.Point(6, 19);
             this.dgvProductList.Name = "dgvProductList";
             this.dgvProductList.ReadOnly = true;
@@ -93,6 +95,76 @@ namespace The2000s.ManageForm.FormProduct
             this.dgvProductList.Size = new System.Drawing.Size(617, 464);
             this.dgvProductList.TabIndex = 1;
             this.dgvProductList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductList_CellClick);
+            // 
+            // No
+            // 
+            this.No.HeaderText = "#";
+            this.No.Name = "No";
+            this.No.ReadOnly = true;
+            this.No.Width = 30;
+            // 
+            // pid
+            // 
+            this.pid.HeaderText = "pid";
+            this.pid.Name = "pid";
+            this.pid.ReadOnly = true;
+            this.pid.Visible = false;
+            // 
+            // ProductName
+            // 
+            this.ProductName.HeaderText = "Tên sản phẩm";
+            this.ProductName.Name = "ProductName";
+            this.ProductName.ReadOnly = true;
+            this.ProductName.Width = 140;
+            // 
+            // SellPrice
+            // 
+            this.SellPrice.HeaderText = "Giá";
+            this.SellPrice.Name = "SellPrice";
+            this.SellPrice.ReadOnly = true;
+            this.SellPrice.Width = 80;
+            // 
+            // ProductCategory
+            // 
+            this.ProductCategory.HeaderText = "Loại sản phẩm";
+            this.ProductCategory.Name = "ProductCategory";
+            this.ProductCategory.ReadOnly = true;
+            this.ProductCategory.Width = 110;
+            // 
+            // CreateDate
+            // 
+            this.CreateDate.HeaderText = "Ngày tạo";
+            this.CreateDate.Name = "CreateDate";
+            this.CreateDate.ReadOnly = true;
+            this.CreateDate.Width = 120;
+            // 
+            // Status
+            // 
+            this.Status.HeaderText = "Trạng thái";
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            this.Status.Width = 90;
+            // 
+            // catid
+            // 
+            this.catid.HeaderText = "catid";
+            this.catid.Name = "catid";
+            this.catid.ReadOnly = true;
+            this.catid.Visible = false;
+            // 
+            // statusid
+            // 
+            this.statusid.HeaderText = "statusid";
+            this.statusid.Name = "statusid";
+            this.statusid.ReadOnly = true;
+            this.statusid.Visible = false;
+            // 
+            // img
+            // 
+            this.img.HeaderText = "img";
+            this.img.Name = "img";
+            this.img.ReadOnly = true;
+            this.img.Visible = false;
             // 
             // groupBox1
             // 
@@ -121,7 +193,7 @@ namespace The2000s.ManageForm.FormProduct
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.txtCreatedBy);
-            this.groupBox2.Controls.Add(this.pictureBox1);
+            this.groupBox2.Controls.Add(this.pbProduct);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.txtCreatedAt);
             this.groupBox2.Controls.Add(this.txtPrice);
@@ -268,19 +340,20 @@ namespace The2000s.ManageForm.FormProduct
             this.txtCreatedBy.Size = new System.Drawing.Size(181, 22);
             this.txtCreatedBy.TabIndex = 6;
             // 
-            // pictureBox1
+            // pbProduct
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(116, 20);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(143, 110);
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.pbProduct.Location = new System.Drawing.Point(79, 20);
+            this.pbProduct.Name = "pbProduct";
+            this.pbProduct.Size = new System.Drawing.Size(180, 110);
+            this.pbProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbProduct.TabIndex = 7;
+            this.pbProduct.TabStop = false;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(26, 60);
+            this.label2.Location = new System.Drawing.Point(6, 62);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 20);
             this.label2.TabIndex = 6;
@@ -354,69 +427,6 @@ namespace The2000s.ManageForm.FormProduct
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // No
-            // 
-            this.No.HeaderText = "#";
-            this.No.Name = "No";
-            this.No.ReadOnly = true;
-            this.No.Width = 30;
-            // 
-            // pid
-            // 
-            this.pid.HeaderText = "pid";
-            this.pid.Name = "pid";
-            this.pid.ReadOnly = true;
-            this.pid.Visible = false;
-            // 
-            // ProductName
-            // 
-            this.ProductName.HeaderText = "Tên sản phẩm";
-            this.ProductName.Name = "ProductName";
-            this.ProductName.ReadOnly = true;
-            this.ProductName.Width = 140;
-            // 
-            // SellPrice
-            // 
-            this.SellPrice.HeaderText = "Giá";
-            this.SellPrice.Name = "SellPrice";
-            this.SellPrice.ReadOnly = true;
-            this.SellPrice.Width = 80;
-            // 
-            // ProductCategory
-            // 
-            this.ProductCategory.HeaderText = "Loại sản phẩm";
-            this.ProductCategory.Name = "ProductCategory";
-            this.ProductCategory.ReadOnly = true;
-            this.ProductCategory.Width = 110;
-            // 
-            // CreateDate
-            // 
-            this.CreateDate.HeaderText = "Ngày tạo";
-            this.CreateDate.Name = "CreateDate";
-            this.CreateDate.ReadOnly = true;
-            this.CreateDate.Width = 120;
-            // 
-            // Status
-            // 
-            this.Status.HeaderText = "Trạng thái";
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
-            this.Status.Width = 90;
-            // 
-            // catid
-            // 
-            this.catid.HeaderText = "catid";
-            this.catid.Name = "catid";
-            this.catid.ReadOnly = true;
-            this.catid.Visible = false;
-            // 
-            // statusid
-            // 
-            this.statusid.HeaderText = "statusid";
-            this.statusid.Name = "statusid";
-            this.statusid.ReadOnly = true;
-            this.statusid.Visible = false;
-            // 
             // frmListProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -437,7 +447,7 @@ namespace The2000s.ManageForm.FormProduct
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProduct)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -459,7 +469,7 @@ namespace The2000s.ManageForm.FormProduct
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtCreatedBy;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbProduct;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCreatedAt;
         private System.Windows.Forms.TextBox txtPrice;
@@ -480,5 +490,6 @@ namespace The2000s.ManageForm.FormProduct
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
         private System.Windows.Forms.DataGridViewTextBoxColumn catid;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn img;
     }
 }
