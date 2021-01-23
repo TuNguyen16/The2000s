@@ -149,6 +149,12 @@
     <Compile Include="ManageForm\FormProduct\frmListProductCategory.Designer.cs">
       <DependentUpon>frmListProductCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageForm\FormSearchStat\frmSearchOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageForm\FormSearchStat\frmSearchOrder.Designer.cs">
+      <DependentUpon>frmSearchOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManageForm\FormSearchStat\frmSearchProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -237,6 +243,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ManageForm\FormProduct\frmListProductCategory.resx">
       <DependentUpon>frmListProductCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageForm\FormSearchStat\frmSearchOrder.resx">
+      <DependentUpon>frmSearchOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageForm\FormSearchStat\frmSearchProduct.resx">
       <DependentUpon>frmSearchProduct.cs</DependentUpon>

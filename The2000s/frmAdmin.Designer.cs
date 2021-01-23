@@ -29,7 +29,7 @@ namespace The2000s
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.menuFeature = new System.Windows.Forms.MenuStrip();
             this.menuProfile = new System.Windows.Forms.ToolStripMenuItem();
@@ -393,8 +393,8 @@ namespace The2000s
             this.dgvOrderList.Location = new System.Drawing.Point(10, 19);
             this.dgvOrderList.Name = "dgvOrderList";
             this.dgvOrderList.ReadOnly = true;
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            this.dgvOrderList.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.dgvOrderList.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvOrderList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvOrderList.Size = new System.Drawing.Size(888, 279);
             this.dgvOrderList.TabIndex = 4;
@@ -503,8 +503,9 @@ namespace The2000s
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(185, 22);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(194, 22);
             this.toolStripMenuItem2.Text = "Tìm kiếm đơn hàng";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // toolStripMenuItem3
             // 
