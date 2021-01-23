@@ -46,6 +46,7 @@ namespace The2000s.ManageForm.FormStorage
         {
             frmImportStorage isto = new frmImportStorage();
             isto.Show();
+            context = new DB_Context();
             LoadGrid();
         }
 

@@ -25,6 +25,11 @@ namespace The2000s.ManageForm.FormSearchStat
             txtPriceS.Enabled = false;
             txtPriceE.Enabled = false;
             cbType.Enabled = false;
+
+            List<ProductCategory> lpc = context.ProductCategories.ToList();
+            cbType.DataSource = lpc;
+            cbType.ValueMember = "CatID";
+            cbType.DisplayMember = "CatName";
         }
 
         private void optName_CheckedChanged(object sender, EventArgs e)

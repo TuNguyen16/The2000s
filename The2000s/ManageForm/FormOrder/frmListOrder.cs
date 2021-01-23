@@ -52,6 +52,7 @@ namespace The2000s.ManageForm.FormOrder
             DialogResult rs = addOrder.ShowDialog();
             if (rs == DialogResult.OK)
             {
+                context = new DB_Context();
                 LoadGrid();
             }
         }
