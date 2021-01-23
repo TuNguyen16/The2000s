@@ -11,6 +11,7 @@ using The2000s.ManageForm.FormProduct;
 using The2000s.ManageForm.FormOrder;
 using The2000s.ManageForm.FormUser;
 using The2000s.ManageForm.FormCustomer;
+using The2000s.ManageForm.FormSearchStat;
 using The2000s.Models;
 using The2000s.ManageForm.FormStorage;
 using System.Globalization;
@@ -162,6 +163,12 @@ namespace The2000s
         {
             frmProfile profile = new frmProfile(loginUser.UserID);
             profile.Show();
+        }
+
+        private void menuSearch_Click(object sender, EventArgs e)
+        {
+            frmSearchProduct spro = new frmSearchProduct();
+            spro.Show();
         }
     }
 }

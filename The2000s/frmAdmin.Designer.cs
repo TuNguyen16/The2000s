@@ -29,7 +29,7 @@ namespace The2000s
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.menuFeature = new System.Windows.Forms.MenuStrip();
             this.menuProfile = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,6 +75,7 @@ namespace The2000s
             this.btnLogout = new System.Windows.Forms.Button();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuFeature.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -210,6 +211,7 @@ namespace The2000s
             this.menuStat.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuSearch,
             this.toolStripMenuItem2,
+            this.toolStripMenuItem3,
             this.toolStripSeparator1,
             this.thốngKêToolStripMenuItem});
             this.menuStat.ForeColor = System.Drawing.Color.Black;
@@ -220,8 +222,9 @@ namespace The2000s
             // menuSearch
             // 
             this.menuSearch.Name = "menuSearch";
-            this.menuSearch.Size = new System.Drawing.Size(185, 22);
+            this.menuSearch.Size = new System.Drawing.Size(194, 22);
             this.menuSearch.Text = "Tìm kiếm sản phẩm";
+            this.menuSearch.Click += new System.EventHandler(this.menuSearch_Click);
             // 
             // thốngKêToolStripMenuItem
             // 
@@ -390,8 +393,8 @@ namespace The2000s
             this.dgvOrderList.Location = new System.Drawing.Point(10, 19);
             this.dgvOrderList.Name = "dgvOrderList";
             this.dgvOrderList.ReadOnly = true;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dgvOrderList.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.dgvOrderList.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvOrderList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvOrderList.Size = new System.Drawing.Size(888, 279);
             this.dgvOrderList.TabIndex = 4;
@@ -503,6 +506,12 @@ namespace The2000s
             this.toolStripMenuItem2.Size = new System.Drawing.Size(185, 22);
             this.toolStripMenuItem2.Text = "Tìm kiếm đơn hàng";
             // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(194, 22);
+            this.toolStripMenuItem3.Text = "Tìm kiếm khách hàng";
+            // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -588,5 +597,6 @@ namespace The2000s
         private System.Windows.Forms.ToolStripMenuItem menuProfile;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
     }
 }
