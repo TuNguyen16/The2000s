@@ -38,8 +38,11 @@ namespace The2000s.ManageForm.FormOrder
         }
         private void btnReport_Click(object sender, EventArgs e)
         {
-            int oid = dgvOrderList.CurrentCell.RowIndex;
-            frmReportOrder report = new frmReportOrder(oid);
+            int i = dgvOrderList.CurrentCell.RowIndex;
+            int oid = Convert.ToInt32(dgvOrderList.Rows[i].Cells[1].Value);
+            Order o = context.Orders.FirstOrDefault(p => p.OrderID == oid);
+            DateTime date = Convert.ToDateTime(o.CreatedAt);
+            frmReportOrder report = new frmReportOrder(oid,date);
             report.Show();
         }
 
@@ -51,7 +54,6 @@ namespace The2000s.ManageForm.FormOrder
             {
                 LoadGrid();
             }
-            
         }
 
         private void frmListOrder_Load(object sender, EventArgs e)

@@ -110,9 +110,9 @@ namespace The2000s.ManageForm.FormOrder
             // btnReport
             // 
             this.btnReport.Font = new System.Drawing.Font("Open Sans", 8F);
-            this.btnReport.Location = new System.Drawing.Point(453, 513);
+            this.btnReport.Location = new System.Drawing.Point(443, 513);
             this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(128, 23);
+            this.btnReport.Size = new System.Drawing.Size(138, 23);
             this.btnReport.TabIndex = 7;
             this.btnReport.Text = "Xem báo cáo đơn hàng";
             this.btnReport.UseVisualStyleBackColor = true;
@@ -121,7 +121,7 @@ namespace The2000s.ManageForm.FormOrder
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Open Sans", 8F);
-            this.btnAdd.Location = new System.Drawing.Point(356, 513);
+            this.btnAdd.Location = new System.Drawing.Point(346, 513);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(91, 23);
             this.btnAdd.TabIndex = 8;

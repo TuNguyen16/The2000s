@@ -175,7 +175,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
             <Top>0.76736in</Top>
-            <Left>3.58208in</Left>
+            <Left>3.44666in</Left>
             <Height>0.5625in</Height>
             <Width>2.57292in</Width>
             <ZIndex>1</ZIndex>
@@ -216,7 +216,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox3</rd:DefaultName>
-            <Left>7.60417in</Left>
+            <Left>7.36459in</Left>
             <Height>0.25in</Height>
             <Width>1.92708in</Width>
             <ZIndex>2</ZIndex>
@@ -822,7 +822,7 @@
             </TablixRowHierarchy>
             <DataSetName>DetailsDataSet</DataSetName>
             <Top>1.60292in</Top>
-            <Left>1.7175in</Left>
+            <Left>1.58208in</Left>
             <Height>0.75in</Height>
             <Width>6.4375in</Width>
             <ZIndex>3</ZIndex>
@@ -836,7 +836,7 @@
         <Height>4.375in</Height>
         <Style />
       </Body>
-      <Width>9.53125in</Width>
+      <Width>9.29167in</Width>
       <Page>
         <LeftMargin>1in</LeftMargin>
         <RightMargin>1in</RightMargin>

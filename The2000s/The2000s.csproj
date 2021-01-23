@@ -36,6 +36,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CodeFirstStoreFunctions, Version=1.2.0.0, Culture=neutral, PublicKeyToken=46c4868af4307d2c, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.CodeFirstStoreFunctions.1.2.0\lib\net45\CodeFirstStoreFunctions.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -80,6 +83,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>db_winformDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="db_winformDataSetimport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_winformDataSetimport.xsd</DependentUpon>
     </Compile>
     <Compile Include="frmNVKho.cs">
       <SubType>Form</SubType>
@@ -159,6 +167,12 @@
     <Compile Include="ManageForm\FormStorage\frmListSupplier.Designer.cs">
       <DependentUpon>frmListSupplier.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageForm\FormStorage\frmReportImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageForm\FormStorage\frmReportImport.Designer.cs">
+      <DependentUpon>frmReportImport.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManageForm\FormUser\frmListUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,10 +187,12 @@
     </Compile>
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\DB_Context.cs" />
+    <Compile Include="Models\ImportDetailsByID.cs" />
     <Compile Include="Models\ImportProduct.cs" />
     <Compile Include="Models\ImportProductDetail.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\OrderDetail.cs" />
+    <Compile Include="Models\OrderDetailsByID.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductCategory.cs" />
     <Compile Include="Models\ProductType.cs" />
@@ -225,6 +241,9 @@
     <EmbeddedResource Include="ManageForm\FormStorage\frmListSupplier.resx">
       <DependentUpon>frmListSupplier.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ManageForm\FormStorage\frmReportImport.resx">
+      <DependentUpon>frmReportImport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManageForm\FormUser\frmListUser.resx">
       <DependentUpon>frmListUser.cs</DependentUpon>
     </EmbeddedResource>
@@ -253,6 +272,17 @@
     </None>
     <None Include="db_winformDataSet.xss">
       <DependentUpon>db_winformDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="db_winformDataSetimport.xsc">
+      <DependentUpon>db_winformDataSetimport.xsd</DependentUpon>
+    </None>
+    <None Include="db_winformDataSetimport.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_winformDataSetimport.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_winformDataSetimport.xss">
+      <DependentUpon>db_winformDataSetimport.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

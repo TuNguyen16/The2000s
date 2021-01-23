@@ -38,8 +38,8 @@ namespace The2000s.ManageForm.FormStorage
             this.CreatedAt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
-            this.btnExit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.btnReport = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvImportList)).BeginInit();
             this.SuspendLayout();
@@ -69,6 +69,7 @@ namespace The2000s.ManageForm.FormStorage
             this.dgvImportList.Location = new System.Drawing.Point(6, 19);
             this.dgvImportList.Name = "dgvImportList";
             this.dgvImportList.ReadOnly = true;
+            this.dgvImportList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvImportList.Size = new System.Drawing.Size(670, 466);
             this.dgvImportList.TabIndex = 0;
             // 
@@ -115,7 +116,6 @@ namespace The2000s.ManageForm.FormStorage
             this.label1.Size = new System.Drawing.Size(48, 15);
             this.label1.TabIndex = 1;
             this.label1.Text = "Tổng số";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtTotal
             // 
@@ -126,23 +126,11 @@ namespace The2000s.ManageForm.FormStorage
             this.txtTotal.Size = new System.Drawing.Size(63, 22);
             this.txtTotal.TabIndex = 2;
             this.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtTotal.TextChanged += new System.EventHandler(this.txtTotal_TextChanged);
-            // 
-            // btnExit
-            // 
-            this.btnExit.Font = new System.Drawing.Font("Open Sans", 8F);
-            this.btnExit.Location = new System.Drawing.Point(635, 506);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(59, 23);
-            this.btnExit.TabIndex = 3;
-            this.btnExit.Text = "Đóng";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Open Sans", 8F);
-            this.btnAdd.Location = new System.Drawing.Point(526, 506);
+            this.btnAdd.Location = new System.Drawing.Point(417, 507);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(102, 23);
             this.btnAdd.TabIndex = 4;
@@ -150,19 +138,31 @@ namespace The2000s.ManageForm.FormStorage
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // btnReport
+            // 
+            this.btnReport.Font = new System.Drawing.Font("Open Sans", 8F);
+            this.btnReport.Location = new System.Drawing.Point(525, 507);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(169, 23);
+            this.btnReport.TabIndex = 8;
+            this.btnReport.Text = "Xem báo cáo đơn nhập hàng";
+            this.btnReport.UseVisualStyleBackColor = true;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
+            // 
             // frmListStorage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(706, 533);
+            this.Controls.Add(this.btnReport);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "frmListStorage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý đơn nhập hàng";
             this.Load += new System.EventHandler(this.frmListStorage_Load);
             this.groupBox1.ResumeLayout(false);
@@ -178,12 +178,12 @@ namespace The2000s.ManageForm.FormStorage
         private System.Windows.Forms.DataGridView dgvImportList;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtTotal;
-        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.DataGridViewTextBoxColumn No;
         private System.Windows.Forms.DataGridViewTextBoxColumn ImportID;
         private System.Windows.Forms.DataGridViewTextBoxColumn SupName;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalMoney;
         private System.Windows.Forms.DataGridViewTextBoxColumn CreatedAt;
+        private System.Windows.Forms.Button btnReport;
     }
 }

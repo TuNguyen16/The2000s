@@ -10,28 +10,31 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using The2000s.Models;
 
-namespace The2000s.ManageForm.FormOrder
+namespace The2000s.ManageForm.FormStorage
 {
-    public partial class frmReportOrder : Form
+    public partial class frmReportImport : Form
     {
         DB_Context context = new DB_Context();
-        public int orderid { get; set; }
+        public int importid { get; set; }
         public DateTime date { get; set; }
-        public frmReportOrder(int oid,DateTime d)
+        public string supname { get; set; }
+        public frmReportImport(int id, DateTime d, string name)
         {
             InitializeComponent();
-            orderid = oid;
+            importid = id;
             date = d;
+            supname = name;
         }
 
-        private void frmReportOrder_Load(object sender, EventArgs e)
+        private void frmReportImport_Load(object sender, EventArgs e)
         {
-            ReportParameter[] para = new ReportParameter[2];
+            ReportParameter[] para = new ReportParameter[3];
             para[0] = new ReportParameter("Date", date.ToString("dd/MM/yyyy"));
-            para[1] = new ReportParameter("ID", orderid.ToString());
+            para[1] = new ReportParameter("ID", importid.ToString());
+            para[2] = new ReportParameter("SupplierName", supname);
             this.reportViewer1.LocalReport.SetParameters(para);
-            List<OrderDetailsByID> list = context.ShowOrderByID(orderid).ToList();
-            ReportDataSource rds = new ReportDataSource("DetailsDataSet",list);
+            List<ImportDetailsByID> list = context.ShowImportByID(importid).ToList();
+            ReportDataSource rds = new ReportDataSource("DetailsDataSet", list);
             this.reportViewer1.LocalReport.DataSources.Clear();
             this.reportViewer1.LocalReport.DataSources.Add(rds);
             this.reportViewer1.RefreshReport();

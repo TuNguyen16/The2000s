@@ -59,14 +59,14 @@ namespace The2000s.ManageForm.FormStorage
             LoadGrid();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void btnReport_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void txtTotal_TextChanged(object sender, EventArgs e)
-        {
-
+            int i = dgvImportList.CurrentCell.RowIndex;
+            int iid = Convert.ToInt32(dgvImportList.Rows[i].Cells[1].Value);
+            ImportProduct ip = context.ImportProducts.FirstOrDefault(p => p.ImportID == iid);
+            DateTime date = Convert.ToDateTime(ip.CreatedAt);
+            frmReportImport report = new frmReportImport(iid, date, ip.Supplier.SupplierName);
+            report.Show();
         }
     }
 }

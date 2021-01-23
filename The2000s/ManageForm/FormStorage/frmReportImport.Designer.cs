@@ -1,7 +1,7 @@
 ﻿
-namespace The2000s.ManageForm.FormOrder
+namespace The2000s.ManageForm.FormStorage
 {
-    partial class frmReportOrder
+    partial class frmReportImport
     {
         /// <summary>
         /// Required designer variable.
@@ -34,14 +34,14 @@ namespace The2000s.ManageForm.FormOrder
             // 
             // reportViewer1
             // 
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "The2000s.Reports.ReportOrderDetails.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "The2000s.Reports.ReportImportDetails.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(12, 12);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(886, 500);
             this.reportViewer1.TabIndex = 0;
             // 
-            // frmReportOrder
+            // frmReportImport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -49,10 +49,10 @@ namespace The2000s.ManageForm.FormOrder
             this.Controls.Add(this.reportViewer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.Name = "frmReportOrder";
+            this.Name = "frmReportImport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Báo cáo đơn hàng";
-            this.Load += new System.EventHandler(this.frmReportOrder_Load);
+            this.Text = "Báo cáo đơn nhập hàng";
+            this.Load += new System.EventHandler(this.frmReportImport_Load);
             this.ResumeLayout(false);
 
         }
