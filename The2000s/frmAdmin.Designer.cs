@@ -29,7 +29,7 @@ namespace The2000s
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.menuFeature = new System.Windows.Forms.MenuStrip();
             this.menuProfile = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,6 +47,10 @@ namespace The2000s
             this.listUser = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStat = new System.Windows.Forms.ToolStripMenuItem();
             this.menuSearchProduct = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuSearchPC = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -73,10 +77,9 @@ namespace The2000s
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.lbRole = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuSearchPC = new System.Windows.Forms.ToolStripMenuItem();
+            this.thốngKêSảnPhẩmBánChạyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thốngKêDoanhThuThuChiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thốngKêKháchHàngThânThiếtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuFeature.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -124,14 +127,14 @@ namespace The2000s
             // QL_Product
             // 
             this.QL_Product.Name = "QL_Product";
-            this.QL_Product.Size = new System.Drawing.Size(180, 22);
+            this.QL_Product.Size = new System.Drawing.Size(176, 22);
             this.QL_Product.Text = "Quản lý sản phẩm";
             this.QL_Product.Click += new System.EventHandler(this.listProduct_Click);
             // 
             // QL_ProductCategory
             // 
             this.QL_ProductCategory.Name = "QL_ProductCategory";
-            this.QL_ProductCategory.Size = new System.Drawing.Size(180, 22);
+            this.QL_ProductCategory.Size = new System.Drawing.Size(176, 22);
             this.QL_ProductCategory.Text = "QL loại sản phẩm";
             this.QL_ProductCategory.Click += new System.EventHandler(this.productCategory_Click);
             // 
@@ -147,7 +150,7 @@ namespace The2000s
             // QL_Order
             // 
             this.QL_Order.Name = "QL_Order";
-            this.QL_Order.Size = new System.Drawing.Size(180, 22);
+            this.QL_Order.Size = new System.Drawing.Size(173, 22);
             this.QL_Order.Text = "Quản lý đơn hàng";
             this.QL_Order.Click += new System.EventHandler(this.orderList_Click);
             // 
@@ -215,7 +218,10 @@ namespace The2000s
             this.toolStripMenuItem2,
             this.toolStripMenuItem3,
             this.toolStripSeparator1,
-            this.thốngKêToolStripMenuItem});
+            this.thốngKêToolStripMenuItem,
+            this.thốngKêSảnPhẩmBánChạyToolStripMenuItem,
+            this.thốngKêDoanhThuThuChiToolStripMenuItem,
+            this.thốngKêKháchHàngThânThiếtToolStripMenuItem});
             this.menuStat.ForeColor = System.Drawing.Color.Black;
             this.menuStat.Name = "menuStat";
             this.menuStat.Size = new System.Drawing.Size(130, 21);
@@ -224,15 +230,42 @@ namespace The2000s
             // menuSearchProduct
             // 
             this.menuSearchProduct.Name = "menuSearchProduct";
-            this.menuSearchProduct.Size = new System.Drawing.Size(208, 22);
+            this.menuSearchProduct.Size = new System.Drawing.Size(238, 22);
             this.menuSearchProduct.Text = "Tìm kiếm sản phẩm";
             this.menuSearchProduct.Click += new System.EventHandler(this.menuSearch_Click);
+            // 
+            // menuSearchPC
+            // 
+            this.menuSearchPC.Name = "menuSearchPC";
+            this.menuSearchPC.Size = new System.Drawing.Size(238, 22);
+            this.menuSearchPC.Text = "Tìm kiếm loại sản phẩm";
+            this.menuSearchPC.Click += new System.EventHandler(this.menuSearchPC_Click);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(238, 22);
+            this.toolStripMenuItem2.Text = "Tìm kiếm đơn hàng";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(238, 22);
+            this.toolStripMenuItem3.Text = "Tìm kiếm khách hàng";
+            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(235, 6);
             // 
             // thốngKêToolStripMenuItem
             // 
             this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
-            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
-            this.thốngKêToolStripMenuItem.Text = "Thống kê";
+            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
+            this.thốngKêToolStripMenuItem.Text = "Thống kê sản phẩm tồn kho";
+            this.thốngKêToolStripMenuItem.Click += new System.EventHandler(this.thốngKêToolStripMenuItem_Click);
             // 
             // groupBox1
             // 
@@ -395,8 +428,8 @@ namespace The2000s
             this.dgvOrderList.Location = new System.Drawing.Point(10, 19);
             this.dgvOrderList.Name = "dgvOrderList";
             this.dgvOrderList.ReadOnly = true;
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            this.dgvOrderList.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.dgvOrderList.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvOrderList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvOrderList.Size = new System.Drawing.Size(888, 279);
             this.dgvOrderList.TabIndex = 4;
@@ -497,31 +530,24 @@ namespace The2000s
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // toolStripSeparator1
+            // thốngKêSảnPhẩmBánChạyToolStripMenuItem
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(205, 6);
+            this.thốngKêSảnPhẩmBánChạyToolStripMenuItem.Name = "thốngKêSảnPhẩmBánChạyToolStripMenuItem";
+            this.thốngKêSảnPhẩmBánChạyToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
+            this.thốngKêSảnPhẩmBánChạyToolStripMenuItem.Text = "Thống kê SP và loại SP bán chạy";
+            this.thốngKêSảnPhẩmBánChạyToolStripMenuItem.Click += new System.EventHandler(this.thốngKêSảnPhẩmBánChạyToolStripMenuItem_Click);
             // 
-            // toolStripMenuItem2
+            // thốngKêDoanhThuThuChiToolStripMenuItem
             // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(208, 22);
-            this.toolStripMenuItem2.Text = "Tìm kiếm đơn hàng";
-            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
+            this.thốngKêDoanhThuThuChiToolStripMenuItem.Name = "thốngKêDoanhThuThuChiToolStripMenuItem";
+            this.thốngKêDoanhThuThuChiToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
+            this.thốngKêDoanhThuThuChiToolStripMenuItem.Text = "Thống kê doanh thu, thu chi";
             // 
-            // toolStripMenuItem3
+            // thốngKêKháchHàngThânThiếtToolStripMenuItem
             // 
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(208, 22);
-            this.toolStripMenuItem3.Text = "Tìm kiếm khách hàng";
-            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
-            // 
-            // menuSearchPC
-            // 
-            this.menuSearchPC.Name = "menuSearchPC";
-            this.menuSearchPC.Size = new System.Drawing.Size(208, 22);
-            this.menuSearchPC.Text = "Tìm kiếm loại sản phẩm";
-            this.menuSearchPC.Click += new System.EventHandler(this.menuSearchPC_Click);
+            this.thốngKêKháchHàngThânThiếtToolStripMenuItem.Name = "thốngKêKháchHàngThânThiếtToolStripMenuItem";
+            this.thốngKêKháchHàngThânThiếtToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
+            this.thốngKêKháchHàngThânThiếtToolStripMenuItem.Text = "Thống kê khách hàng thân thiết";
             // 
             // frmAdmin
             // 
@@ -610,5 +636,8 @@ namespace The2000s
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem menuSearchPC;
+        private System.Windows.Forms.ToolStripMenuItem thốngKêSảnPhẩmBánChạyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem thốngKêDoanhThuThuChiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem thốngKêKháchHàngThânThiếtToolStripMenuItem;
     }
 }

@@ -173,6 +173,12 @@
     <Compile Include="ManageForm\FormSearchStat\frmSearchProduct.Designer.cs">
       <DependentUpon>frmSearchProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageForm\FormSearchStat\frmStatProductRemain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageForm\FormSearchStat\frmStatProductRemain.Designer.cs">
+      <DependentUpon>frmStatProductRemain.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManageForm\FormStorage\frmImportStorage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -267,6 +273,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ManageForm\FormSearchStat\frmSearchProduct.resx">
       <DependentUpon>frmSearchProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageForm\FormSearchStat\frmStatProductRemain.resx">
+      <DependentUpon>frmStatProductRemain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageForm\FormStorage\frmImportStorage.resx">
       <DependentUpon>frmImportStorage.cs</DependentUpon>

@@ -188,5 +188,16 @@ namespace The2000s
             frmSearchPC spc = new frmSearchPC();
             spc.Show();
         }
+
+        private void thốngKêSảnPhẩmBánChạyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void thốngKêToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmStatProductRemain stat1 = new frmStatProductRemain();
+            stat1.Show();
+        }
     }
 }
