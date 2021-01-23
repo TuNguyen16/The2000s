@@ -76,6 +76,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="db_winformDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_winformDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frmNVKho.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -236,6 +241,19 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reports\ReportImportDetails.rdlc" />
+    <EmbeddedResource Include="Reports\ReportOrderDetails.rdlc" />
+    <None Include="db_winformDataSet.xsc">
+      <DependentUpon>db_winformDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="db_winformDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_winformDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_winformDataSet.xss">
+      <DependentUpon>db_winformDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

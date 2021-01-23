@@ -38,7 +38,9 @@ namespace The2000s.ManageForm.FormOrder
         }
         private void btnReport_Click(object sender, EventArgs e)
         {
-
+            int oid = dgvOrderList.CurrentCell.RowIndex;
+            frmReportOrder report = new frmReportOrder(oid);
+            report.Show();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)

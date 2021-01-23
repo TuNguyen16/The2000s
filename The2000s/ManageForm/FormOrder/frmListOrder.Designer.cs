@@ -161,6 +161,7 @@ namespace The2000s.ManageForm.FormOrder
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "frmListOrder";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý đơn hàng";
             this.Load += new System.EventHandler(this.frmListOrder_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderList)).EndInit();
