@@ -29,7 +29,7 @@ namespace The2000s
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.menuFeature = new System.Windows.Forms.MenuStrip();
             this.menuProfile = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,7 +46,7 @@ namespace The2000s
             this.menuUser = new System.Windows.Forms.ToolStripMenuItem();
             this.listUser = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStat = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuSearch = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuSearchProduct = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -76,7 +76,7 @@ namespace The2000s
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuSearchPC = new System.Windows.Forms.ToolStripMenuItem();
             this.menuFeature.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -124,14 +124,14 @@ namespace The2000s
             // QL_Product
             // 
             this.QL_Product.Name = "QL_Product";
-            this.QL_Product.Size = new System.Drawing.Size(176, 22);
+            this.QL_Product.Size = new System.Drawing.Size(180, 22);
             this.QL_Product.Text = "Quản lý sản phẩm";
             this.QL_Product.Click += new System.EventHandler(this.listProduct_Click);
             // 
             // QL_ProductCategory
             // 
             this.QL_ProductCategory.Name = "QL_ProductCategory";
-            this.QL_ProductCategory.Size = new System.Drawing.Size(176, 22);
+            this.QL_ProductCategory.Size = new System.Drawing.Size(180, 22);
             this.QL_ProductCategory.Text = "QL loại sản phẩm";
             this.QL_ProductCategory.Click += new System.EventHandler(this.productCategory_Click);
             // 
@@ -147,7 +147,7 @@ namespace The2000s
             // QL_Order
             // 
             this.QL_Order.Name = "QL_Order";
-            this.QL_Order.Size = new System.Drawing.Size(173, 22);
+            this.QL_Order.Size = new System.Drawing.Size(180, 22);
             this.QL_Order.Text = "Quản lý đơn hàng";
             this.QL_Order.Click += new System.EventHandler(this.orderList_Click);
             // 
@@ -210,8 +210,8 @@ namespace The2000s
             // menuStat
             // 
             this.menuStat.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuSearch,
-            this.toolStripMenuItem4,
+            this.menuSearchProduct,
+            this.menuSearchPC,
             this.toolStripMenuItem2,
             this.toolStripMenuItem3,
             this.toolStripSeparator1,
@@ -221,17 +221,17 @@ namespace The2000s
             this.menuStat.Size = new System.Drawing.Size(130, 21);
             this.menuStat.Text = "Tra cứu và thống kê";
             // 
-            // menuSearch
+            // menuSearchProduct
             // 
-            this.menuSearch.Name = "menuSearch";
-            this.menuSearch.Size = new System.Drawing.Size(194, 22);
-            this.menuSearch.Text = "Tìm kiếm sản phẩm";
-            this.menuSearch.Click += new System.EventHandler(this.menuSearch_Click);
+            this.menuSearchProduct.Name = "menuSearchProduct";
+            this.menuSearchProduct.Size = new System.Drawing.Size(208, 22);
+            this.menuSearchProduct.Text = "Tìm kiếm sản phẩm";
+            this.menuSearchProduct.Click += new System.EventHandler(this.menuSearch_Click);
             // 
             // thốngKêToolStripMenuItem
             // 
             this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
-            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
             this.thốngKêToolStripMenuItem.Text = "Thống kê";
             // 
             // groupBox1
@@ -395,8 +395,8 @@ namespace The2000s
             this.dgvOrderList.Location = new System.Drawing.Point(10, 19);
             this.dgvOrderList.Name = "dgvOrderList";
             this.dgvOrderList.ReadOnly = true;
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            this.dgvOrderList.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.dgvOrderList.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvOrderList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvOrderList.Size = new System.Drawing.Size(888, 279);
             this.dgvOrderList.TabIndex = 4;
@@ -500,26 +500,28 @@ namespace The2000s
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(182, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(205, 6);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(194, 22);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(208, 22);
             this.toolStripMenuItem2.Text = "Tìm kiếm đơn hàng";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(194, 22);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(208, 22);
             this.toolStripMenuItem3.Text = "Tìm kiếm khách hàng";
+            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
-            // toolStripMenuItem4
+            // menuSearchPC
             // 
-            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(208, 22);
-            this.toolStripMenuItem4.Text = "Tìm kiếm loại sản phẩm";
+            this.menuSearchPC.Name = "menuSearchPC";
+            this.menuSearchPC.Size = new System.Drawing.Size(208, 22);
+            this.menuSearchPC.Text = "Tìm kiếm loại sản phẩm";
+            this.menuSearchPC.Click += new System.EventHandler(this.menuSearchPC_Click);
             // 
             // frmAdmin
             // 
@@ -589,7 +591,7 @@ namespace The2000s
         private System.Windows.Forms.ToolStripMenuItem QL_Supplier;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem menuStat;
-        private System.Windows.Forms.ToolStripMenuItem menuSearch;
+        private System.Windows.Forms.ToolStripMenuItem menuSearchProduct;
         private System.Windows.Forms.ToolStripMenuItem thốngKêToolStripMenuItem;
         private System.Windows.Forms.Label lbRole;
         private System.Windows.Forms.ToolStripMenuItem menuCustomer;
@@ -607,6 +609,6 @@ namespace The2000s
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem menuSearchPC;
     }
 }

@@ -149,11 +149,23 @@
     <Compile Include="ManageForm\FormProduct\frmListProductCategory.Designer.cs">
       <DependentUpon>frmListProductCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageForm\FormSearchStat\frmSearchCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageForm\FormSearchStat\frmSearchCustomer.Designer.cs">
+      <DependentUpon>frmSearchCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManageForm\FormSearchStat\frmSearchOrder.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ManageForm\FormSearchStat\frmSearchOrder.Designer.cs">
       <DependentUpon>frmSearchOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageForm\FormSearchStat\frmSearchPC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageForm\FormSearchStat\frmSearchPC.Designer.cs">
+      <DependentUpon>frmSearchPC.cs</DependentUpon>
     </Compile>
     <Compile Include="ManageForm\FormSearchStat\frmSearchProduct.cs">
       <SubType>Form</SubType>
@@ -244,8 +256,14 @@
     <EmbeddedResource Include="ManageForm\FormProduct\frmListProductCategory.resx">
       <DependentUpon>frmListProductCategory.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ManageForm\FormSearchStat\frmSearchCustomer.resx">
+      <DependentUpon>frmSearchCustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManageForm\FormSearchStat\frmSearchOrder.resx">
       <DependentUpon>frmSearchOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageForm\FormSearchStat\frmSearchPC.resx">
+      <DependentUpon>frmSearchPC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageForm\FormSearchStat\frmSearchProduct.resx">
       <DependentUpon>frmSearchProduct.cs</DependentUpon>

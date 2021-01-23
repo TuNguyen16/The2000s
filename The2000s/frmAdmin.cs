@@ -176,5 +176,17 @@ namespace The2000s
             frmSearchOrder sor = new frmSearchOrder();
             sor.Show();
         }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            frmSearchCustomer scs = new frmSearchCustomer();
+            scs.Show();
+        }
+
+        private void menuSearchPC_Click(object sender, EventArgs e)
+        {
+            frmSearchPC spc = new frmSearchPC();
+            spc.Show();
+        }
     }
 }
