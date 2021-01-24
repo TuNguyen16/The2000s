@@ -191,6 +191,7 @@ namespace The2000s.ManageForm.FormSearchStat
             this.dgvProduct.Location = new System.Drawing.Point(12, 163);
             this.dgvProduct.Name = "dgvProduct";
             this.dgvProduct.ReadOnly = true;
+            this.dgvProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProduct.Size = new System.Drawing.Size(445, 360);
             this.dgvProduct.TabIndex = 1;
             // 
@@ -233,6 +234,7 @@ namespace The2000s.ManageForm.FormSearchStat
             this.dgvCategory.Location = new System.Drawing.Point(463, 163);
             this.dgvCategory.Name = "dgvCategory";
             this.dgvCategory.ReadOnly = true;
+            this.dgvCategory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCategory.Size = new System.Drawing.Size(445, 360);
             this.dgvCategory.TabIndex = 2;
             // 

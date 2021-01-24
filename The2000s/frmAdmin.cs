@@ -211,7 +211,8 @@ namespace The2000s
 
         private void thốngKêKháchHàngThânThiếtToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmStatCustomer scus = new frmStatCustomer();
+            scus.ShowDialog();
         }
     }
 }

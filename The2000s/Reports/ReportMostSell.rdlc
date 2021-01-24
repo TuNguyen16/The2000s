@@ -127,7 +127,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>SẢN PHẨM BÁN CHẠY</Value>
+                    <Value>DANH SÁCH SẢN PHẨM BÁN CHẠY</Value>
                     <Style>
                       <FontSize>18pt</FontSize>
                       <FontWeight>Bold</FontWeight>
@@ -153,9 +153,9 @@
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
             <Top>0.76736in</Top>
-            <Left>3.36979in</Left>
+            <Left>2.74479in</Left>
             <Height>0.5625in</Height>
-            <Width>2.8125in</Width>
+            <Width>4.36458in</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>

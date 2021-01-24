@@ -55,6 +55,7 @@ namespace The2000s.ManageForm.FormSearchStat
             this.dgvResult.Location = new System.Drawing.Point(12, 53);
             this.dgvResult.Name = "dgvResult";
             this.dgvResult.ReadOnly = true;
+            this.dgvResult.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvResult.Size = new System.Drawing.Size(555, 242);
             this.dgvResult.TabIndex = 0;
             // 

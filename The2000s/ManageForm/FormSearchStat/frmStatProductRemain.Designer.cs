@@ -63,6 +63,7 @@ namespace The2000s.ManageForm.FormSearchStat
             this.dgvProductList.Location = new System.Drawing.Point(12, 45);
             this.dgvProductList.Name = "dgvProductList";
             this.dgvProductList.ReadOnly = true;
+            this.dgvProductList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProductList.Size = new System.Drawing.Size(547, 353);
             this.dgvProductList.TabIndex = 1;
             // 

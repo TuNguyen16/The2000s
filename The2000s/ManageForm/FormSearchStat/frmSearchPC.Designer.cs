@@ -30,16 +30,16 @@ namespace The2000s.ManageForm.FormSearchStat
         private void InitializeComponent()
         {
             this.dgvResult = new System.Windows.Forms.DataGridView();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cbParent = new System.Windows.Forms.ComboBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.optName = new System.Windows.Forms.RadioButton();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.optParent = new System.Windows.Forms.RadioButton();
+            this.optName = new System.Windows.Forms.RadioButton();
+            this.cbParent = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResult)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -57,8 +57,34 @@ namespace The2000s.ManageForm.FormSearchStat
             this.dgvResult.Location = new System.Drawing.Point(12, 103);
             this.dgvResult.Name = "dgvResult";
             this.dgvResult.ReadOnly = true;
+            this.dgvResult.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvResult.Size = new System.Drawing.Size(429, 170);
             this.dgvResult.TabIndex = 0;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "#";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 30;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Mã loại";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Tên loại";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Loại cấp cha";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // btnSearch
             // 
@@ -94,38 +120,17 @@ namespace The2000s.ManageForm.FormSearchStat
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm kiếm";
             // 
-            // cbParent
+            // optParent
             // 
-            this.cbParent.FormattingEnabled = true;
-            this.cbParent.Location = new System.Drawing.Point(144, 48);
-            this.cbParent.Name = "cbParent";
-            this.cbParent.Size = new System.Drawing.Size(140, 25);
-            this.cbParent.TabIndex = 5;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "#";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 30;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Mã loại";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Tên loại";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Loại cấp cha";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
+            this.optParent.AutoSize = true;
+            this.optParent.Location = new System.Drawing.Point(15, 49);
+            this.optParent.Name = "optParent";
+            this.optParent.Size = new System.Drawing.Size(123, 21);
+            this.optParent.TabIndex = 7;
+            this.optParent.TabStop = true;
+            this.optParent.Text = "Theo loại cấp cha";
+            this.optParent.UseVisualStyleBackColor = true;
+            this.optParent.CheckedChanged += new System.EventHandler(this.optParent_CheckedChanged);
             // 
             // optName
             // 
@@ -139,17 +144,13 @@ namespace The2000s.ManageForm.FormSearchStat
             this.optName.UseVisualStyleBackColor = true;
             this.optName.CheckedChanged += new System.EventHandler(this.optName_CheckedChanged);
             // 
-            // optParent
+            // cbParent
             // 
-            this.optParent.AutoSize = true;
-            this.optParent.Location = new System.Drawing.Point(15, 49);
-            this.optParent.Name = "optParent";
-            this.optParent.Size = new System.Drawing.Size(123, 21);
-            this.optParent.TabIndex = 7;
-            this.optParent.TabStop = true;
-            this.optParent.Text = "Theo loại cấp cha";
-            this.optParent.UseVisualStyleBackColor = true;
-            this.optParent.CheckedChanged += new System.EventHandler(this.optParent_CheckedChanged);
+            this.cbParent.FormattingEnabled = true;
+            this.cbParent.Location = new System.Drawing.Point(144, 48);
+            this.cbParent.Name = "cbParent";
+            this.cbParent.Size = new System.Drawing.Size(140, 25);
+            this.cbParent.TabIndex = 5;
             // 
             // frmSearchPC
             // 
