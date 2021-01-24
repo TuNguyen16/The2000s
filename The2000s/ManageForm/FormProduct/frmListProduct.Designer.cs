@@ -383,6 +383,7 @@ namespace The2000s.ManageForm.FormProduct
             // 
             // txtProductID
             // 
+            this.txtProductID.Enabled = false;
             this.txtProductID.Location = new System.Drawing.Point(78, 136);
             this.txtProductID.Name = "txtProductID";
             this.txtProductID.Size = new System.Drawing.Size(181, 22);

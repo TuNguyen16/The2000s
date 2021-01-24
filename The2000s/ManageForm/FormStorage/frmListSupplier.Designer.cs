@@ -127,6 +127,7 @@ namespace The2000s.ManageForm.FormStorage
             // 
             // txtSupplierID
             // 
+            this.txtSupplierID.Enabled = false;
             this.txtSupplierID.Location = new System.Drawing.Point(94, 22);
             this.txtSupplierID.Name = "txtSupplierID";
             this.txtSupplierID.Size = new System.Drawing.Size(152, 22);
@@ -280,6 +281,7 @@ namespace The2000s.ManageForm.FormStorage
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "frmListSupplier";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý nhà cung cấp";
             this.Load += new System.EventHandler(this.frmListSupplier_Load);
             this.groupBox2.ResumeLayout(false);

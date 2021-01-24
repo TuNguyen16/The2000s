@@ -50,13 +50,9 @@ namespace The2000s.ManageForm.FormUser
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtAddress = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.cbPermission = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtFullName = new System.Windows.Forms.TextBox();
@@ -64,6 +60,10 @@ namespace The2000s.ManageForm.FormUser
             this.label1 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.btnExit = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserList)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -242,6 +242,7 @@ namespace The2000s.ManageForm.FormUser
             // 
             // txtUserID
             // 
+            this.txtUserID.Enabled = false;
             this.txtUserID.Location = new System.Drawing.Point(98, 22);
             this.txtUserID.Name = "txtUserID";
             this.txtUserID.Size = new System.Drawing.Size(148, 22);
@@ -272,23 +273,6 @@ namespace The2000s.ManageForm.FormUser
             this.txtAddress.Size = new System.Drawing.Size(148, 22);
             this.txtAddress.TabIndex = 3;
             // 
-            // txtPassword
-            // 
-            this.txtPassword.Location = new System.Drawing.Point(98, 154);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(148, 22);
-            this.txtPassword.TabIndex = 6;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 157);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 15);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "Mật khẩu";
-            // 
             // btnDelete
             // 
             this.btnDelete.Location = new System.Drawing.Point(155, 235);
@@ -315,22 +299,6 @@ namespace The2000s.ManageForm.FormUser
             this.cbPermission.Name = "cbPermission";
             this.cbPermission.Size = new System.Drawing.Size(148, 23);
             this.cbPermission.TabIndex = 7;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 131);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 15);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Tên người dùng";
-            // 
-            // txtUsername
-            // 
-            this.txtUsername.Location = new System.Drawing.Point(98, 128);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(148, 22);
-            this.txtUsername.TabIndex = 5;
             // 
             // txtEmail
             // 
@@ -396,6 +364,39 @@ namespace The2000s.ManageForm.FormUser
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 131);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(89, 15);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Tên người dùng";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 157);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(56, 15);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Mật khẩu";
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(98, 154);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(148, 22);
+            this.txtPassword.TabIndex = 6;
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.Location = new System.Drawing.Point(98, 128);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(148, 22);
+            this.txtUsername.TabIndex = 5;
+            // 
             // frmListUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -430,8 +431,6 @@ namespace The2000s.ManageForm.FormUser
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cbPermission;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtFullName;
@@ -441,8 +440,6 @@ namespace The2000s.ManageForm.FormUser
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtAddress;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtUserID;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtCreatedAt;
@@ -457,5 +454,9 @@ namespace The2000s.ManageForm.FormUser
         private System.Windows.Forms.DataGridViewTextBoxColumn RoleID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Address;
         private System.Windows.Forms.DataGridViewTextBoxColumn U_CreatedAt;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtUsername;
     }
 }

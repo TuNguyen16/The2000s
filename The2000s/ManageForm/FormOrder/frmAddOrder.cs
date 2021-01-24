@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,43 +25,58 @@ namespace The2000s.ManageForm.FormOrder
 
         private void txtCustomerID_TextChanged(object sender, EventArgs e)
         {
-            if (txtCustomerID.Text != "")
+            try
             {
-                int cusid = Convert.ToInt32(txtCustomerID.Text);
-                Customer cus = context.Customers.FirstOrDefault(p => p.CustomerID == cusid);
-                if (cus != null)
+                if (txtCustomerID.Text != "")
                 {
-                    txtCustomerName.Text = cus.CustomerName;
+                    int cusid = Convert.ToInt32(txtCustomerID.Text);
+                    Customer cus = context.Customers.FirstOrDefault(p => p.CustomerID == cusid);
+                    if (cus != null)
+                    {
+                        txtCustomerName.Text = cus.CustomerName;
+                    }
+                    else
+                    {
+                        txtCustomerName.Text = "";
+                    }
                 }
                 else
                 {
                     txtCustomerName.Text = "";
                 }
             }
-            else
+            catch (Exception)
             {
-                txtCustomerName.Text = "";
+
             }
         }
 
         private void txtProductID_TextChanged(object sender, EventArgs e)
         {
-            if (txtProductID.Text != "")
+            try
             {
-                int pid = Convert.ToInt32(txtProductID.Text);
-                Product product = context.Products.FirstOrDefault(p => p.ProductID == pid);
-                if (product != null)
+                if (txtProductID.Text != "")
                 {
-                    txtProductName.Text = product.ProductName;
+                    int pid = Convert.ToInt32(txtProductID.Text);
+                    Product product = context.Products.FirstOrDefault(p => p.ProductID == pid);
+                    if (product != null)
+                    {
+                        txtProductName.Text = product.ProductName;
+                    }
+                    else
+                    {
+                        txtProductName.Text = "";
+                    }
                 }
                 else
                 {
                     txtProductName.Text = "";
                 }
             }
-            else
+            catch (Exception)
             {
-                txtProductName.Text = "";
+
+               
             }
         }
 
@@ -82,31 +98,37 @@ namespace The2000s.ManageForm.FormOrder
             {
                 totalMoney += Convert.ToInt32(row.Cells[5].Value);
             }
-            txtTotal.Text = totalMoney.ToString();
+            txtTotal.Text = totalMoney.ToString("C0", new CultureInfo("vi-VN", false));
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
             try
             {
+                if (txtCustomerID.Text == "" || txtCustomerName.Text == "")
+                {
+                    throw new Exception("Thông tin khách hàng chưa chính xác");
+                }
                 if (txtProductID.Text == "" || txtProductName.Text == "" || txtAmount.Text == "")
                 {
                     throw new Exception("Thông tin sản phẩm chưa chính xác");
                 }
+                int pid = Convert.ToInt32(txtProductID.Text);
+                Product tmp = context.Products.FirstOrDefault(p => p.ProductID == pid);
                 foreach (DataGridViewRow row in dgvProductList.Rows)
                 {
                     if (row.Cells[1].Value.ToString() == txtProductID.Text)
                     {
-                        throw new Exception("Đã có sản phẩm này trong danh sách");
+
+                        int cur = Convert.ToInt32(row.Cells[3].Value);
+                        cur += Convert.ToInt32(txtAmount.Text);
+                        row.Cells[3].Value = cur;
+                        row.Cells[5].Value = cur * Convert.ToInt32(row.Cells[4].Value);
+                        CalcTotalMoney();
+                        return;
                     }
                 }
-                int pid = Convert.ToInt32(txtProductID.Text);
-                Product tmp = context.Products.FirstOrDefault(p => p.ProductID == pid);
-                if (tmp != null)
-                {
-                    AddToGrid(tmp);
-                }
+                AddToGrid(tmp);
                 CalcTotalMoney();
-
             }
             catch (Exception ex)
             {

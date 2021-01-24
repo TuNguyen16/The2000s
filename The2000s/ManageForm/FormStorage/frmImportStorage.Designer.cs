@@ -352,6 +352,7 @@ namespace The2000s.ManageForm.FormStorage
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "frmImportStorage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm đơn nhập hàng";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

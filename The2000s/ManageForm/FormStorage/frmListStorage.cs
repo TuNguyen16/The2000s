@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,7 +37,7 @@ namespace The2000s.ManageForm.FormStorage
                         totalMoney += Convert.ToInt32(ipd.Amount * ipd.BuyPrice);
                     }
                 }
-                dgvImportList.Rows[i].Cells[3].Value = totalMoney;
+                dgvImportList.Rows[i].Cells[3].Value = totalMoney.ToString("C0",new CultureInfo("vi-VN", false));
                 dgvImportList.Rows[i].Cells[4].Value = ip.CreatedAt;
                 total++;
             }
@@ -45,7 +46,7 @@ namespace The2000s.ManageForm.FormStorage
         private void btnAdd_Click(object sender, EventArgs e)
         {
             frmImportStorage isto = new frmImportStorage();
-            isto.Show();
+            isto.ShowDialog();
             context = new DB_Context();
             LoadGrid();
         }
@@ -67,7 +68,7 @@ namespace The2000s.ManageForm.FormStorage
             ImportProduct ip = context.ImportProducts.FirstOrDefault(p => p.ImportID == iid);
             DateTime date = Convert.ToDateTime(ip.CreatedAt);
             frmReportImport report = new frmReportImport(iid, date, ip.Supplier.SupplierName);
-            report.Show();
+            report.ShowDialog();
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -68,7 +69,8 @@ namespace The2000s.ManageForm.FormStorage
             dgvProductList.Rows[i].Cells[3].Value = txtAmount.Text;
             dgvProductList.Rows[i].Cells[4].Value = txtBuyPrice.Text;
             int amount = Convert.ToInt32(txtAmount.Text);
-            dgvProductList.Rows[i].Cells[5].Value = (amount * p.Price);
+            int buyprice = Convert.ToInt32(txtBuyPrice.Text);
+            dgvProductList.Rows[i].Cells[5].Value = (amount * buyprice);
         }
         private void CalcTotalMoney()
         {
@@ -77,30 +79,37 @@ namespace The2000s.ManageForm.FormStorage
             {
                 totalMoney += Convert.ToInt32(row.Cells[5].Value);
             }
-            txtTotal.Text = totalMoney.ToString();
+            txtTotal.Text = totalMoney.ToString("C0", new CultureInfo("vi-VN", false));
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
             try
             {
+                if (txtSupplierID.Text == "" || txtSupplierName.Text == "")
+                {
+                    throw new Exception("Thông tin nhà cung cấp chưa chính xác");
+                }
                 if (txtProductID.Text == "" || txtProductName.Text == "" || txtAmount.Text == "")
                 {
                     throw new Exception("Thông tin sản phẩm chưa chính xác");
                 }
+                int pid = Convert.ToInt32(txtProductID.Text);
+                Product tmp = context.Products.FirstOrDefault(p => p.ProductID == pid);
                 foreach (DataGridViewRow row in dgvProductList.Rows)
                 {
                     if (row.Cells[1].Value.ToString() == txtProductID.Text)
                     {
-                        throw new Exception("Đã có sản phẩm này trong danh sách");
+
+                        int cur = Convert.ToInt32(row.Cells[3].Value);
+                        cur += Convert.ToInt32(txtAmount.Text);
+                        row.Cells[3].Value = cur;
+                        row.Cells[5].Value = cur * Convert.ToInt32(row.Cells[4].Value);
+                        CalcTotalMoney();
+                        return;
                     }
                 }
-                int pid = Convert.ToInt32(txtProductID.Text);
-                Product tmp = context.Products.FirstOrDefault(p => p.ProductID == pid);
-                if (tmp != null)
-                {
-                    AddToGrid(tmp);
-                }
+                AddToGrid(tmp);
                 CalcTotalMoney();
             }
             catch (Exception ex)

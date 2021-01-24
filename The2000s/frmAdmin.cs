@@ -86,7 +86,7 @@ namespace The2000s
                     dgvOrderList.Rows[i].Cells[2].Value = o.Customer.CustomerName;
                     dgvOrderList.Rows[i].Cells[4].Value = o.Customer.Address;
                     dgvOrderList.Rows[i].Cells[3].Value = o.Customer.Phone;
-                    dgvOrderList.Rows[i].Cells[5].Value = totalPrice;
+                    dgvOrderList.Rows[i].Cells[5].Value = totalPrice.ToString("C0", new CultureInfo("vi-VN", false));
                     dgvOrderList.Rows[i].Cells[6].Value = (o.Status == 0) ? "Đang xử lý" : (o.Status == 1 ? "Đã giao hàng" : "Đã hủy đơn");
                     dgvOrderList.Rows[i].Cells[7].Value = o.CreatedAt;
                 }
@@ -118,34 +118,34 @@ namespace The2000s
         private void orderList_Click(object sender, EventArgs e)
         {
             frmListOrder olist = new frmListOrder(loginUser.UserID);
-            olist.Show();
+            olist.ShowDialog();
             UpdateInfo();
         }
 
         private void listUser_Click(object sender, EventArgs e)
         {
             frmListUser luser = new frmListUser(loginUser.UserID);
-            luser.Show();
+            luser.ShowDialog();
         }
 
         private void listCustomer_Click(object sender, EventArgs e)
         {
             frmListCustomer lcus = new frmListCustomer();
-            lcus.Show();
+            lcus.ShowDialog();
         }
         
 
         private void QL_Storage_Click(object sender, EventArgs e)
         {
             frmListStorage lsto = new frmListStorage();
-            lsto.Show();
+            lsto.ShowDialog();
             UpdateInfo();
         }
 
         private void QL_Supplier_Click(object sender, EventArgs e)
         {
             frmListSupplier lsup = new frmListSupplier();
-            lsup.Show();
+            lsup.ShowDialog();
             UpdateInfo();
         }
         #endregion
@@ -162,31 +162,31 @@ namespace The2000s
         private void menuProfile_Click(object sender, EventArgs e)
         {
             frmProfile profile = new frmProfile(loginUser.UserID);
-            profile.Show();
+            profile.ShowDialog();
         }
 
         private void menuSearch_Click(object sender, EventArgs e)
         {
             frmSearchProduct spro = new frmSearchProduct();
-            spro.Show();
+            spro.ShowDialog();
         }
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
             frmSearchOrder sor = new frmSearchOrder();
-            sor.Show();
+            sor.ShowDialog();
         }
 
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
             frmSearchCustomer scs = new frmSearchCustomer();
-            scs.Show();
+            scs.ShowDialog();
         }
 
         private void menuSearchPC_Click(object sender, EventArgs e)
         {
             frmSearchPC spc = new frmSearchPC();
-            spc.Show();
+            spc.ShowDialog();
         }
 
         private void thốngKêSảnPhẩmBánChạyToolStripMenuItem_Click(object sender, EventArgs e)
@@ -197,7 +197,7 @@ namespace The2000s
         private void thốngKêToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmStatProductRemain stat1 = new frmStatProductRemain();
-            stat1.Show();
+            stat1.ShowDialog();
         }
 
         private void thốngKêDoanhThuThuChiToolStripMenuItem_Click(object sender, EventArgs e)

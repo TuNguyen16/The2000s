@@ -182,10 +182,12 @@ namespace The2000s.ManageForm.FormCustomer
             // 
             // txtCustomerID
             // 
+            this.txtCustomerID.Enabled = false;
             this.txtCustomerID.Location = new System.Drawing.Point(104, 26);
             this.txtCustomerID.Name = "txtCustomerID";
             this.txtCustomerID.Size = new System.Drawing.Size(129, 22);
             this.txtCustomerID.TabIndex = 5;
+            this.txtCustomerID.TextChanged += new System.EventHandler(this.txtCustomerID_TextChanged);
             // 
             // label3
             // 
@@ -278,6 +280,7 @@ namespace The2000s.ManageForm.FormCustomer
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "frmListCustomer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý thông tin khách hàng";
             this.Load += new System.EventHandler(this.frmListCustomer_Load);
             this.groupBox1.ResumeLayout(false);

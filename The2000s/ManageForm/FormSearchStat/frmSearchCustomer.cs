@@ -22,7 +22,7 @@ namespace The2000s.ManageForm.FormSearchStat
         private void btnSearch_Click(object sender, EventArgs e)
         {
             dgvResult.Rows.Clear();
-            List<Customer> lcs = context.Customers.Where(p => p.CustomerName == txtName.Text).ToList();
+            List<Customer> lcs = context.Customers.Where(p => p.CustomerName.Contains(txtName.Text)).ToList();
             if (lcs != null)
             {
                 foreach (Customer cs in lcs)

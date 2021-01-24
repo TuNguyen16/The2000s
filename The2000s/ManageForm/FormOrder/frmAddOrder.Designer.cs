@@ -333,6 +333,7 @@ namespace The2000s.ManageForm.FormOrder
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "frmAddOrder";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm đơn hàng";
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductList)).EndInit();
             this.groupBox1.ResumeLayout(false);

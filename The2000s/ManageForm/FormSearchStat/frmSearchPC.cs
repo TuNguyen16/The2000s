@@ -59,7 +59,7 @@ namespace The2000s.ManageForm.FormSearchStat
             dgvResult.Rows.Clear();
             if (optName.Checked == true)
             {
-                List<ProductCategory> lpc = context.ProductCategories.Where(p => p.CatName == txtName.Text).ToList();
+                List<ProductCategory> lpc = context.ProductCategories.Where(p => p.CatName.Contains(txtName.Text)).ToList();
                 foreach (ProductCategory pc in lpc)
                 {
                     int i = dgvResult.Rows.Add();

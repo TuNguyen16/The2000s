@@ -42,19 +42,15 @@ namespace The2000s.ManageForm.FormOrder
             int oid = Convert.ToInt32(dgvOrderList.Rows[i].Cells[1].Value);
             Order o = context.Orders.FirstOrDefault(p => p.OrderID == oid);
             DateTime date = Convert.ToDateTime(o.CreatedAt);
-            frmReportOrder report = new frmReportOrder(oid,date);
+            frmReportOrder report = new frmReportOrder(oid, date);
             report.Show();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
             frmAddOrder addOrder = new frmAddOrder(userid);
-            DialogResult rs = addOrder.ShowDialog();
-            if (rs == DialogResult.OK)
-            {
-                context = new DB_Context();
-                LoadGrid();
-            }
+            addOrder.ShowDialog();
+            LoadGrid();
         }
 
         private void frmListOrder_Load(object sender, EventArgs e)

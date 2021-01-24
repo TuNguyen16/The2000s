@@ -156,5 +156,10 @@ namespace The2000s.ManageForm.FormCustomer
             txtCustomerAddress.Text = dgvCustomerList.Rows[i].Cells[2].Value.ToString();
             txtCustomerPhone.Text = dgvCustomerList.Rows[i].Cells[3].Value.ToString();
         }
+
+        private void txtCustomerID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
