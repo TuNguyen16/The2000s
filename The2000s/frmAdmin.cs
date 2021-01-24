@@ -47,7 +47,7 @@ namespace The2000s
             }
             else
             {
-                return num.ToString("N1", CultureInfo.InvariantCulture);
+                return num.ToString("N0", CultureInfo.InvariantCulture);
             }
         }
         private void UpdateInfo()
@@ -206,7 +206,8 @@ namespace The2000s
 
         private void thốngKêDoanhThuThuChiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmStatProfit statp = new frmStatProfit();
+            statp.ShowDialog();
         }
 
         private void thốngKêKháchHàngThânThiếtToolStripMenuItem_Click(object sender, EventArgs e)

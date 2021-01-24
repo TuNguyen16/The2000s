@@ -151,6 +151,7 @@
     </Compile>
     <Compile Include="ManageForm\FormSearchStat\Class\CustomerReport.cs" />
     <Compile Include="ManageForm\FormSearchStat\Class\ProductReport.cs" />
+    <Compile Include="ManageForm\FormSearchStat\Class\ProfitReport.cs" />
     <Compile Include="ManageForm\FormSearchStat\frmSearchCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +194,12 @@
     <Compile Include="ManageForm\FormSearchStat\frmStatProductRemain.Designer.cs">
       <DependentUpon>frmStatProductRemain.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageForm\FormSearchStat\frmStatProfit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageForm\FormSearchStat\frmStatProfit.Designer.cs">
+      <DependentUpon>frmStatProfit.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManageForm\FormSearchStat\Report\frmReportCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +211,12 @@
     </Compile>
     <Compile Include="ManageForm\FormSearchStat\Report\frmReportMostSell.Designer.cs">
       <DependentUpon>frmReportMostSell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageForm\FormSearchStat\Report\frmReportProfit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageForm\FormSearchStat\Report\frmReportProfit.Designer.cs">
+      <DependentUpon>frmReportProfit.cs</DependentUpon>
     </Compile>
     <Compile Include="ManageForm\FormStorage\frmImportStorage.cs">
       <SubType>Form</SubType>
@@ -309,11 +322,17 @@
     <EmbeddedResource Include="ManageForm\FormSearchStat\frmStatProductRemain.resx">
       <DependentUpon>frmStatProductRemain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ManageForm\FormSearchStat\frmStatProfit.resx">
+      <DependentUpon>frmStatProfit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManageForm\FormSearchStat\Report\frmReportCustomer.resx">
       <DependentUpon>frmReportCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageForm\FormSearchStat\Report\frmReportMostSell.resx">
       <DependentUpon>frmReportMostSell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageForm\FormSearchStat\Report\frmReportProfit.resx">
+      <DependentUpon>frmReportProfit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageForm\FormStorage\frmImportStorage.resx">
       <DependentUpon>frmImportStorage.cs</DependentUpon>
@@ -347,6 +366,7 @@
     <EmbeddedResource Include="Reports\ReportImportDetails.rdlc" />
     <EmbeddedResource Include="Reports\ReportMostSell.rdlc" />
     <EmbeddedResource Include="Reports\ReportOrderDetails.rdlc" />
+    <EmbeddedResource Include="Reports\ReportProfit.rdlc" />
     <None Include="db_winformDataSet.xsc">
       <DependentUpon>db_winformDataSet.xsd</DependentUpon>
     </None>
@@ -372,6 +392,7 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\The2000s.ManageForm.FormSearchStat.Class.CustomerReport.datasource" />
     <None Include="Properties\DataSources\The2000s.ManageForm.FormSearchStat.Class.ProductReport.datasource" />
+    <None Include="Properties\DataSources\The2000s.ManageForm.FormSearchStat.Class.ProfitReport.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

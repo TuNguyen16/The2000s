@@ -116,8 +116,8 @@ namespace The2000s.ManageForm.FormSearchStat
             {
                 int quarst = (Convert.ToInt32(numQuarter.Value) * 3) - 2;
                 int quaren = (Convert.ToInt32(numQuarter.Value) * 3);
-                DateTime st = new DateTime(dtpMonth.Value.Year, quarst, 01);
-                DateTime en = new DateTime(dtpMonth.Value.Year, quaren, DateTime.DaysInMonth(dtpMonth.Value.Year, quaren));
+                DateTime st = new DateTime(dtpQYear.Value.Year, quarst, 01);
+                DateTime en = new DateTime(dtpQYear.Value.Year, quaren, DateTime.DaysInMonth(dtpQYear.Value.Year, quaren));
                 foreach (Product pro in context.Products)
                 {
                     int sumP = Convert.ToInt32(context.OrderDetails.AsEnumerable().Where(p => p.ProductID == pro.ProductID && p.Order.Status == 1 && DateTime.Compare(Convert.ToDateTime(p.Order.CreatedAt), st) >= 0 && DateTime.Compare(Convert.ToDateTime(p.Order.CreatedAt), en) <= 0).Sum(p => p.Amount));
