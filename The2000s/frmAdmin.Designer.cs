@@ -29,7 +29,7 @@ namespace The2000s
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.menuFeature = new System.Windows.Forms.MenuStrip();
             this.menuProfile = new System.Windows.Forms.ToolStripMenuItem();
@@ -428,8 +428,8 @@ namespace The2000s
             this.dgvOrderList.Location = new System.Drawing.Point(10, 19);
             this.dgvOrderList.Name = "dgvOrderList";
             this.dgvOrderList.ReadOnly = true;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.dgvOrderList.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.dgvOrderList.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvOrderList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvOrderList.Size = new System.Drawing.Size(888, 279);
             this.dgvOrderList.TabIndex = 4;
@@ -542,12 +542,14 @@ namespace The2000s
             this.thốngKêDoanhThuThuChiToolStripMenuItem.Name = "thốngKêDoanhThuThuChiToolStripMenuItem";
             this.thốngKêDoanhThuThuChiToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
             this.thốngKêDoanhThuThuChiToolStripMenuItem.Text = "Thống kê doanh thu, thu chi";
+            this.thốngKêDoanhThuThuChiToolStripMenuItem.Click += new System.EventHandler(this.thốngKêDoanhThuThuChiToolStripMenuItem_Click);
             // 
             // thốngKêKháchHàngThânThiếtToolStripMenuItem
             // 
             this.thốngKêKháchHàngThânThiếtToolStripMenuItem.Name = "thốngKêKháchHàngThânThiếtToolStripMenuItem";
             this.thốngKêKháchHàngThânThiếtToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
             this.thốngKêKháchHàngThânThiếtToolStripMenuItem.Text = "Thống kê khách hàng thân thiết";
+            this.thốngKêKháchHàngThânThiếtToolStripMenuItem.Click += new System.EventHandler(this.thốngKêKháchHàngThânThiếtToolStripMenuItem_Click);
             // 
             // frmAdmin
             // 

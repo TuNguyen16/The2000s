@@ -199,5 +199,15 @@ namespace The2000s
             frmStatProductRemain stat1 = new frmStatProductRemain();
             stat1.Show();
         }
+
+        private void thốngKêDoanhThuThuChiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void thốngKêKháchHàngThânThiếtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
