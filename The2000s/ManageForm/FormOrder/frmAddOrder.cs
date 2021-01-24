@@ -82,6 +82,11 @@ namespace The2000s.ManageForm.FormOrder
 
         private void AddToGrid(Product p)
         {
+            if (Convert.ToInt32(txtAmount.Text) > context.ImportProductDetails.AsEnumerable().Where(k => k.ProductID == Convert.ToInt32(txtProductID.Text)).Sum(k => k.Amount)
+                                 - context.OrderDetails.AsEnumerable().Where(k => k.ProductID == Convert.ToInt32(txtProductID.Text) && k.Order.Status != 2).Sum(k => k.Amount))
+            {
+                throw new Exception("Hàng trong kho không đủ");
+            }
             int i = dgvProductList.Rows.Add();
             dgvProductList.Rows[i].Cells[0].Value = i + 1;
             dgvProductList.Rows[i].Cells[1].Value = p.ProductID;
@@ -121,6 +126,11 @@ namespace The2000s.ManageForm.FormOrder
 
                         int cur = Convert.ToInt32(row.Cells[3].Value);
                         cur += Convert.ToInt32(txtAmount.Text);
+                        if (cur > context.ImportProductDetails.AsEnumerable().Where(p=>p.ProductID == Convert.ToInt32(row.Cells[1].Value)).Sum(p=>p.Amount)
+                                 - context.OrderDetails.AsEnumerable().Where(p => p.ProductID == Convert.ToInt32(row.Cells[1].Value) && p.Order.Status != 2).Sum(p => p.Amount))
+                        {
+                            throw new Exception("Hàng trong kho không đủ");
+                        }
                         row.Cells[3].Value = cur;
                         row.Cells[5].Value = cur * Convert.ToInt32(row.Cells[4].Value);
                         CalcTotalMoney();
