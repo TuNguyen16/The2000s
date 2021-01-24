@@ -11,6 +11,7 @@ using The2000s.ManageForm.FormProduct;
 using The2000s.ManageForm.FormOrder;
 using The2000s.ManageForm.FormUser;
 using The2000s.ManageForm.FormCustomer;
+using The2000s.ManageForm.FormSearchStat;
 using The2000s.Models;
 using The2000s.ManageForm.FormStorage;
 using System.Globalization;
@@ -79,7 +80,7 @@ namespace The2000s
                     dgvOrderList.Rows[i].Cells[0].Value = i + 1;
                     dgvOrderList.Rows[i].Cells[1].Value = o.ImportID;
                     dgvOrderList.Rows[i].Cells[2].Value = o.Supplier.SupplierName;
-                    dgvOrderList.Rows[i].Cells[3].Value = totalPrice;
+                    dgvOrderList.Rows[i].Cells[3].Value = totalPrice.ToString("C0",new CultureInfo("vi-VN",false));
                     dgvOrderList.Rows[i].Cells[4].Value = o.CreatedAt;
                 }
             }
@@ -163,6 +164,24 @@ namespace The2000s
         {
             frmProfile profile = new frmProfile(loginUser.UserID);
             profile.Show();
+        }
+
+        private void menuSearchProduct_Click(object sender, EventArgs e)
+        {
+            frmSearchProduct spro = new frmSearchProduct();
+            spro.ShowDialog();
+        }
+
+        private void menuSearchPC_Click(object sender, EventArgs e)
+        {
+            frmSearchPC spc = new frmSearchPC();
+            spc.ShowDialog();
+        }
+
+        private void thốngKêToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmStatProductRemain stat1 = new frmStatProductRemain();
+            stat1.ShowDialog();
         }
     }
 }

@@ -11,6 +11,7 @@ using The2000s.ManageForm.FormProduct;
 using The2000s.ManageForm.FormOrder;
 using The2000s.ManageForm.FormUser;
 using The2000s.ManageForm.FormCustomer;
+using The2000s.ManageForm.FormSearchStat;
 using The2000s.Models;
 using The2000s.ManageForm.FormStorage;
 using System.Globalization;
@@ -39,7 +40,7 @@ namespace The2000s
             {
                 return ((double)num / 1000000000).ToString("N1", CultureInfo.InvariantCulture) + " tỷ";
             }
-            else if(num > 1000000)
+            else if (num > 1000000)
             {
                 return ((double)num / 1000000).ToString("N1", CultureInfo.InvariantCulture) + " triệu";
             }
@@ -127,7 +128,7 @@ namespace The2000s
             luser.Show();
             UpdateInfo();
         }
-        
+
         private void listCustomer_Click(object sender, EventArgs e)
         {
             frmListCustomer lcus = new frmListCustomer();
@@ -165,5 +166,42 @@ namespace The2000s
             frmProfile profile = new frmProfile(loginUser.UserID);
             profile.Show();
         }
+
+        private void menuSearchProduct_Click(object sender, EventArgs e)
+        {
+            frmSearchProduct spro = new frmSearchProduct();
+            spro.ShowDialog();
+        }
+
+        private void menuSearchPC_Click(object sender, EventArgs e)
+        {
+            frmSearchPC spc = new frmSearchPC();
+            spc.ShowDialog();
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            frmSearchOrder sor = new frmSearchOrder();
+            sor.ShowDialog();
+        }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            frmSearchCustomer scs = new frmSearchCustomer();
+            scs.ShowDialog();
+        }
+
+        private void thốngKêSảnPhẩmBánChạyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmStatMostSell smost = new frmStatMostSell();
+            smost.ShowDialog();
+        }
+
+        private void thốngKêKháchHàngThânThiếtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmStatCustomer scus = new frmStatCustomer();
+            scus.ShowDialog();
+        }
+
     }
 }

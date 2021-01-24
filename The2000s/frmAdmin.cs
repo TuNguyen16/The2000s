@@ -161,7 +161,7 @@ namespace The2000s
                 this.Close();
             }
         }
-
+        #region Thong Ke
         private void menuProfile_Click(object sender, EventArgs e)
         {
             frmProfile profile = new frmProfile(loginUser.UserID);
@@ -215,5 +215,6 @@ namespace The2000s
             frmStatCustomer scus = new frmStatCustomer();
             scus.ShowDialog();
         }
+        #endregion
     }
 }
