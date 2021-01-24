@@ -31,7 +31,7 @@ namespace The2000s.ManageForm.FormSearchStat
                 int sold = 0;
                 foreach (OrderDetail od in context.OrderDetails)
                 {
-                    if (od.ProductID == p.ProductID)
+                    if (od.ProductID == p.ProductID && od.Order.Status != 2)
                     {
                         sold += Convert.ToInt32(od.Amount);
                     }
@@ -48,7 +48,7 @@ namespace The2000s.ManageForm.FormSearchStat
                 dgvProductList.Rows[i].Cells[4].Value = (bought - sold >= 20) ? "" : (bought - sold > 0 ? "Sắp hết" : "Hết hàng");
             }
 
-            int totalSold = Convert.ToInt32(context.OrderDetails.Sum(p => p.Amount));
+            int totalSold = Convert.ToInt32(context.OrderDetails.Where(p=>p.Order.Status != 2).Sum(p => p.Amount));
             int totalBought = Convert.ToInt32(context.ImportProductDetails.Sum(p => p.Amount));
             lbProductRemain.Text = "Tổng các sản phẩm trong kho: " + (totalBought - totalSold);
         }

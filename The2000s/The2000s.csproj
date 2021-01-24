@@ -149,6 +149,7 @@
     <Compile Include="ManageForm\FormProduct\frmListProductCategory.Designer.cs">
       <DependentUpon>frmListProductCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageForm\FormSearchStat\Class\ProductReport.cs" />
     <Compile Include="ManageForm\FormSearchStat\frmSearchCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +185,12 @@
     </Compile>
     <Compile Include="ManageForm\FormSearchStat\frmStatProductRemain.Designer.cs">
       <DependentUpon>frmStatProductRemain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageForm\FormSearchStat\Report\frmReportMostSell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageForm\FormSearchStat\Report\frmReportMostSell.Designer.cs">
+      <DependentUpon>frmReportMostSell.cs</DependentUpon>
     </Compile>
     <Compile Include="ManageForm\FormStorage\frmImportStorage.cs">
       <SubType>Form</SubType>
@@ -286,6 +293,9 @@
     <EmbeddedResource Include="ManageForm\FormSearchStat\frmStatProductRemain.resx">
       <DependentUpon>frmStatProductRemain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ManageForm\FormSearchStat\Report\frmReportMostSell.resx">
+      <DependentUpon>frmReportMostSell.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManageForm\FormStorage\frmImportStorage.resx">
       <DependentUpon>frmImportStorage.cs</DependentUpon>
     </EmbeddedResource>
@@ -315,6 +325,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Reports\ReportImportDetails.rdlc" />
+    <EmbeddedResource Include="Reports\ReportMostSell.rdlc" />
     <EmbeddedResource Include="Reports\ReportOrderDetails.rdlc" />
     <None Include="db_winformDataSet.xsc">
       <DependentUpon>db_winformDataSet.xsd</DependentUpon>
@@ -339,6 +350,7 @@
       <DependentUpon>db_winformDataSetimport.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\The2000s.ManageForm.FormSearchStat.Class.ProductReport.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

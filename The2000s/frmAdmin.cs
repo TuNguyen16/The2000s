@@ -63,7 +63,10 @@ namespace The2000s
             int earned = 0;
             foreach (OrderDetail o in context.OrderDetails)
             {
-                earned += (int)(o.Amount * o.Product.Price);
+                if (o.Order.Status == 1)
+                {
+                    earned += (int)(o.Amount * o.Product.Price);
+                }
             }
             lbEarned.Text = ShortNumber(earned) + " đồng";
             //---------------------Hiển thị đơn hàng mới (2 ngày)---------------------
@@ -191,7 +194,8 @@ namespace The2000s
 
         private void thốngKêSảnPhẩmBánChạyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmStatMostSell smost = new frmStatMostSell();
+            smost.ShowDialog();
         }
 
         private void thốngKêToolStripMenuItem_Click(object sender, EventArgs e)
